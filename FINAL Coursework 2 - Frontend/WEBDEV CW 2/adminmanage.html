@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SMAPPLE - Admin Manage Products</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-custom.css" />
+
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand logo h1 align-self-center" href="index.html">
+          SMAPPLE
+        </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-center mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html" style="margin-right: 20px">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+
+                    <!-- Button trigger modal -->
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    </a>
+
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+
+    <!-- Start Modal -->
+    <div class="modal fade bg-white" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Close Modal -->
+
+
+    <div id="add_div" style="margin-top: 150px;margin-left: 500px;">
+        <h2 style="margin-left: 125px;margin-top: -75px;margin-bottom: 75px;color:black;">Admin Panel</h2>
+
+        <div class="btn-group">
+            <button id=view type="button" class="btn btn-default">View Products</button>
+            <button id=manage type="button" class="btn btn-default">Manage Products</button>
+            <button id=order type="button" class="btn btn-default">View Orders</button>
+            <button id=customer type="button" class="btn btn-default">View Customers</button>
+
+        </div>
+        <br /><br />
+        <label for="prod_name"> <br>Product Name: &emsp;</label>
+        <input type="text" id="prod_name" class="text" />
+        <br /><br />
+        <label for="price"> Price:&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+        <input type="text" id="price" class="text" />
+        <br /><br />
+        <label for="category"> Category: &emsp; &emsp;&emsp;</label>
+        <input type="text" id="category" class="text" />
+        <br /><br />
+        <label for="img"> Image URL: &emsp; &emsp;</label>
+        <input type="text" id="img" class="text" />
+        <br /><br />
+        <label for="availability"> Availability: &emsp; &emsp; </label>
+        <input type="text" id="availability" class="text" />
+        <br /><br />
+        <input id=add type="button" class="button" value="Add Product" />
+        <input id=delete type="button" class="button" value="Delete Product" style="margin-left: 45px;" />
+    </div>
+
+
+
+</body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.getElementById("add").addEventListener("click", myFunction);
+    document.getElementById("delete").addEventListener("click", myFunction2);
+    document.getElementById("view").addEventListener("click", myFunction3);
+    document.getElementById("manage").addEventListener("click", myFunction4);
+    document.getElementById("order").addEventListener("click", myFunction5);
+    document.getElementById("customer").addEventListener("click", myFunction6);
+
+    function myFunction() {
+        Swal.fire(
+            'Congratulations!',
+            'Product has been added!',
+            'success'
+        )
+    }
+
+    function myFunction2() {
+        Swal.fire(
+            'Congratulations!',
+            'Product has been removed!',
+            'success'
+        )
+    }
+
+    function myFunction3() {
+        window.location.href = "adminview.html";
+    }
+
+    function myFunction4() {
+        window.location.href = "adminmanage.html";
+    }
+
+    function myFunction5() {
+        window.location.href = "adminorder.html";
+    }
+
+    function myFunction6() {
+        window.location.href = "admincustomer.html";
+    }
+</script>
+
+</html>

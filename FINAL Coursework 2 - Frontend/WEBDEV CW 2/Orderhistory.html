@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SMAPPLE - Home Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.ico"
+    />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-custom.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
+
+    <!-- Font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
+    />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand logo h1 align-self-center" href="index.html">
+          SMAPPLE
+        </a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main_nav"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
+          id="main_nav"
+        >
+
+          <div class="flex-fill">
+            <ul class="nav navbar-nav d-flex justify-content-center mx-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">Register</a>
+              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html" style="margin-right: 20px"
+                    >Profile</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar align-self-center d-flex">
+
+            <!-- Button trigger modal -->
+            <a
+              class="nav-icon d-none d-lg-inline"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <i class="fa fa-fw fa-search text-dark mr-2"></i>
+            </a>
+
+            <a class="nav-icon position-relative text-decoration-none" href="#">
+              <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+            </a>
+
+            <a class="nav-icon position-relative text-decoration-none" href="#">
+              <i class="fa fa-fw fa-user text-dark mr-3"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Close Header -->
+
+
+    <!---Start of the main content----->
+    <div>
+
+
+        <!----------Table for cart page------------->
+
+        <div class="ace">
+            <h9>Your Order History</h9>
+        </div>
+
+
+        <table class="order">
+
+            <t>
+                <th>Products</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Date</th>
+                <th>Remove</th>
+                </tr>
+
+                <tr>
+                    <td data-label="Products">Iphone 13-pro</td>
+                    <td data-label="Price">3,500</td>
+                    <td data-label="Quantity">1</td>
+                    <td data-label="Date">30/12/2020</td>
+                    <td data-label="Remove">
+                        <a href="#">X</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Products">Samsung-Galaxy-S21+ 5G</td>
+                    <td data-label="Price">2,999</td>
+                    <td data-label="Quantity">1</td>
+                    <td data-label="Date">15/06/2021</td>
+                    <td data-label="Remove">
+                        <a href="#">X</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Products">Samsung-Galaxy-Z-Fold</td>
+                    <td data-label="Price">2,599</td>
+                    <td data-label="Quantity">2</td>
+                    <td data-label="date">1/01/2022</td>
+                    <td data-label="Remove">
+                        <a href="#">X</a>
+                    </td>
+                </tr>
+
+        </table>
+        <!------End of the Main Content-------->
+
+</body>
+<!---End of body----->
+
+</html>
+<!---End of the html code----->

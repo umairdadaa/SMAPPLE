@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SMAPPLE - Admin View Order</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-custom.css" />
+
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand logo h1 align-self-center" href="index.html">
+          SMAPPLE
+        </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-center mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html" style="margin-right: 20px">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+
+                    <!-- Button trigger modal -->
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    </a>
+
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+
+    <!-- Start Modal -->
+    <div class="modal fade bg-white" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Close Modal -->
+
+    <div class="btn-group" style="margin-top: 89px;margin-left: 450px;margin-bottom: 50px;">
+        <button id=view type="button" class="btn btn-default">View Products</button>
+        <button id=manage type="button" class="btn btn-default">Manage Products</button>
+        <button id=order type="button" class="btn btn-default">View Orders</button>
+        <button id=customer type="button" class="btn btn-default">View Customers</button>
+    </div>
+
+    <div class="page-header" style="margin-left: 600px; margin-bottom: 50px;">
+        <h1>View Orders</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID#</th>
+                <th>Customer ID</th>
+                <th>Customer First Name</th>
+                <th>Customer Last Name</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>16511</td>
+                <td>12555</td>
+                <td>John</td>
+                <td>Wick</td>
+                <td>Samsung S21 Ultra</td>
+                <td>1</td>
+                <td>3,999</td>
+            </tr>
+            <tr>
+                <td>25995</td>
+                <td>52662</td>
+                <td>Peter</td>
+                <td>Parker</td>
+                <td>Iphone 13 PRO MAX</td>
+                <td>1</td>
+                <td>4,999</td>
+            </tr>
+            <tr>
+                <td>54859</td>
+                <td>93464</td>
+                <td>Tom</td>
+                <td>Hardy</td>
+                <td>Iphone 12</td>
+                <td>1</td>
+                <td>2,999</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        document.getElementById("view").addEventListener("click", myFunction3);
+        document.getElementById("manage").addEventListener("click", myFunction4);
+        document.getElementById("order").addEventListener("click", myFunction5);
+        document.getElementById("customer").addEventListener("click", myFunction6);
+
+        function myFunction3() {
+            window.location.href = "adminview.html";
+        }
+
+        function myFunction4() {
+            window.location.href = "adminmanage.html";
+        }
+
+        function myFunction5() {
+            window.location.href = "adminorder.html";
+        }
+
+        function myFunction6() {
+            window.location.href = "admincustomer.html";
+        }
+    </script>
+</body>
+
+</html>

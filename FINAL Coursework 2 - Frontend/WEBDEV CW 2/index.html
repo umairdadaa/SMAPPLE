@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SMAPPLE - Home Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-custom.css" />
+    <link rel="stylesheet" href="assets/css/index.css " />
+
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand logo h1 align-self-center" href="index.html">
+          SMAPPLE
+        </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="main_nav">
+
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-center mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html" style="margin-right: 20px">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+
+                    <!-- Button trigger modal -->
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+
+                    <a class="nav-icon position-relative text-decoration-none" href="carts.html">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+
+                    </a>
+
+                    <a class="nav-icon position-relative text-decoration-none" href="profile.html">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+
+
+    <!-- Start Modal -->
+    <div class="modal fade bg-white" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Close Modal -->
+
+    <!-- Start Hero Section -->
+    <div class="wrapper">
+        <button class="apple-button"><a href="apple-products.html">CLICK HERE FOR APPLE PHONES</a></button>
+        <button class="samsung-button"><a href="samsung-products.html">CLICK HERE FOR SAMSUNG PHONES</a></button>
+
+        <!-- <h1 style="top: 21%; left: 38%; position: absolute;" class="display-4">Need a phone?</h1> -->
+
+        <img src="assets/img/smvsap.jpg" class="img-fluid mx-auto d-block" alt="hero-image" style="width: 100%;">
+    </div>
+    <!-- End Hero Section -->
+
+
+
+    <!-- Start Recommended Product -->
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1">Recommeded Products</h1>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <a href="view-product.html">
+                            <img src="assets/img/iphone13.png" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <h5>iPhone 13 Pro</h5>
+                                </li>
+                                <li class=" text-right">AED3124.99</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <a href="view-product.html">
+                            <img src="./assets/img/samsung21.png" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <h5>Galaxy S21 Ultra 5G</h5>
+                                </li>
+                                <li class=" text-right">AED3124.99</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <a href="view-product.html">
+                            <img src="./assets/img/iphone12.png" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <h5>iPhone 12</h5>
+                                </li>
+                                <li class=" text-right">AED3124.99</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
+                    </div>
+                </div>
+
+    </section>
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light logo">
+                        SMAPPLE
+                    </h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i> Middlesex University, Dubai
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none">04 2132 043924</a
+                >
+              </li>
+              <li>
+                <i class="fa fa-envelope fa-fw"></i>
+                <a class="text-decoration-none"
+                  >sdsa@live.mdx.ac.uk</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 pt-5">
+            <h2 class="h2 text-light border-bottom pb-3 border-light">
+              Assistance
+            </h2>
+            <ul class="list-unstyled text-light footer-link-list">
+              <li><a class="text-decoration-none" href="#">Sell at SMAPPLE.com</a></li>
+                        <li><a class="text-decoration-none" href="#">Store Locator</a></li>
+                        <li><a class="text-decoration-none" href="#">Bulk Orders & Enquiries</a></li>
+                        <li>
+                            <a class="text-decoration-none" href="#">Easy Payment Plan</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="#">Disclaimer Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">
+                        Further Info
+                    </h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">About Us</a></li>
+                        <li>
+                            <a class="text-decoration-none" href="#">Shop Locations</a>
+                        </li>
+                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-auto">
+                <label class="sr-only" for="subscribeEmail">Email address</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address" />
+                    <div class="input-group-text btn-success text-light">
+                        Subscribe
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2021 SMAPPLE | Designed by Team SMAPPLE
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>
