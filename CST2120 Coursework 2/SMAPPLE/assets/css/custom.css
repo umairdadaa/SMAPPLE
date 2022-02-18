@@ -252,8 +252,8 @@ span {
 
 .btn {
     text-transform: uppercase;
-    color: #fff;
-    background: #0000cd;
+    color: #000;
+    background: #fff;
     border: 0;
     border-radius: 5px;
     box-shadow: 0px 2px 4px 8px rgba(119, 119, 119, 0.2);
