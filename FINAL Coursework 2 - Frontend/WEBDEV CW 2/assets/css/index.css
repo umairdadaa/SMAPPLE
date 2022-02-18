@@ -2,30 +2,26 @@
 .apple-button{
     transition: all .5s ease;
         cursor: pointer;
-      border: 1px solid #f3f4f5;
+      border: 1px solid transparent;
       font-size: 1.5em;
-      background-color: transparent;
+      background-color: white;
       text-align: center;
       display: inline-block;
       position: absolute;
-      top: 12%;
-      left: 0%;
-      width: 50%;
-      height: 100%;
+      margin-left: 250px;
+      margin-top: 25px;
     }
 
 .samsung-button{
     transition: all .5s ease;
     text-align: center;
-    border: 1px solid #ffffff;
+    border: 1px solid transparent;
     font-size: 1.5em;
-    background-color : transparent;
+    background-color : white;
     display: inline-block;
     position: absolute;
-    top: 12%;
-    left: 50%;
-    width: 50%;
-    height: 100%;
+    margin-left: 920px;
+    margin-top: 25px;
     }
 
 .samsung-button:hover{
@@ -42,5 +38,5 @@ a {
     color: red;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 1900;
   }
