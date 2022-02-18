@@ -34,20 +34,18 @@
             <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-center mx-lg-auto">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="home.html">Home</a>
+                            <a class="nav-link" href="view_products_admin.html" style="margin-left: -20px">View Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="edit_products_admin.html">Manage Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="view_order_admin.html">View Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="register.html">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="profile.html" style="margin-right: 20px">Profile</a>
+                            <a class="nav-link" href="view_customers_admin.html" style="margin-right: 20px">View Customers</a>
                         </li>
                     </ul>
                 </div>
@@ -67,14 +65,7 @@
     </nav>
     <!-- Close Header -->
 
-    <div class="btn-group" style="margin-top: 89px;margin-left: 450px;margin-bottom: 50px;">
-        <button id=view type="button" class="btn btn-default">View Products</button>
-        <button id=manage type="button" class="btn btn-default">Manage Products</button>
-        <button id=order type="button" class="btn btn-default">View Orders</button>
-        <button id=customer type="button" class="btn btn-default">View Customers</button>
-    </div>
-
-    <div class="page-header" style="margin-left: 600px; margin-bottom: 50px;">
+    <div class="page-header" style="margin-left: 600px; margin-bottom: 50px;margin-top: 100px">
         <h1>View Customers</h1>
     </div>
     <table class="table">
@@ -134,28 +125,7 @@
     </table>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-    <script>
-        document.getElementById("view").addEventListener("click", myFunction3);
-        document.getElementById("manage").addEventListener("click", myFunction4);
-        document.getElementById("order").addEventListener("click", myFunction5);
-        document.getElementById("customer").addEventListener("click", myFunction6);
 
-        function myFunction3() {
-            window.location.href = "view_products_admin.html";
-        }
-
-        function myFunction4() {
-            window.location.href = "edit_products_admin.html";
-        }
-
-        function myFunction5() {
-            window.location.href = "view_order_admin.html";
-        }
-
-        function myFunction6() {
-            window.location.href = "view_customers_admin.html";
-        }
-    </script>
 </body>
 
 </html>
