@@ -1,82 +1,82 @@
 .signup-box {
-    width: 360px;
-    padding: 2px 4px;
-    margin: auto;
-    margin-top: 20px;
-    background-color: white;
-    border: 1px solid rgb(182, 165, 165);
-    border-radius: 10px;
-    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.5);
+  width: 360px;
+  padding: 2px 4px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid rgb(182, 165, 165);
+  border-radius: 10px;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .login-box {
-    width: 360px;
-    height: 310px;
-    padding: 2px 4px;
-    margin: auto;
-    margin-top: 45px;
-    background-color: white;
-    border: 1px solid rgb(182, 165, 165);
-    border-radius: 10px;
-    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.5);
+  width: 360px;
+  height: 310px;
+  padding: 2px 4px;
+  margin: auto;
+  margin-top: 45px;
+  background-color: white;
+  border: 1px solid rgb(182, 165, 165);
+  border-radius: 10px;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .submit-btn {
-    width: 100%;
-    height: 100%;
-    padding: 8px 20px;
-    color: #fff;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 15px;
-    border: 1px solid black;
-    background-color: #0000cd;
-    border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 8px 20px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 15px;
+  border: 1px solid black;
+  background-color: #0000cd;
+  border-radius: 5px;
 }
 
 h1 {
-    text-align: left;
-    margin-left: 20px;
-    padding-top: 15px;
-    color: #111;
-    font-weight: lighter;
+  text-align: left;
+  margin-left: 20px;
+  padding-top: 15px;
+  color: #111;
+  font-weight: lighter;
 }
 
 form {
-    width: 300px;
-    padding: 4px 7px;
-    margin-left: 19px;
+  width: 300px;
+  padding: 4px 7px;
+  margin-left: 19px;
 }
 
 form label {
-    display: flex;
-    margin-top: 15px;
-    margin-bottom: 3px;
-    margin-left: 2px;
-    color: #111;
-    
-    font-weight: bold;
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 3px;
+  margin-left: 2px;
+  color: #111;
+
+  font-weight: bold;
 }
 
 form input {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    border: 1px solid grey;
-    border-radius: 5px;
-    outline: none;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  outline: none;
 }
 
 form p {
-    color: #111;
-    padding-top: 10px;
-    margin-right: 80px;
-    font-size: 11px;
-    font-weight: lighter;
+  color: #111;
+  padding-top: 10px;
+  margin-right: 80px;
+  font-size: 11px;
+  font-weight: lighter;
 }
 
 .para-2 {
-    text-align: center;
-    margin-top: 35px;
-    padding-top: 100px;
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 100px;
 }
