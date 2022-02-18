@@ -24,7 +24,10 @@
 
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <nav class="navbar navbar-expand-lg navbar-light shadow" style="
+    margin-top: -13pc;
+    margin-bottom: 35px;
+">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand logo h1 align-self-center" href="home.html">
           SMAPPLE
@@ -87,31 +90,34 @@
     </div>
 
     <div class="form-container">
-        <h2 class="form-title">Payment Details</h2>
-        <input id=back type="button" value="Go back" style="margin-left: 375px;margin-top: -85px;">
-        <form action="" class="checkout-form">
-            <div class="input-line">
-                <label for="name">Name on card</label>
-                <input type="text" name="name" id="name" placeholder="Your name and surname">
-            </div>
-            <div class="input-line">
-                <label for="name">Card number</label>
-                <input type="text" name="name" id="name" placeholder="1111-2222-3333-4444">
-            </div>
-            <div class="input-container">
-                <div class="input-line">
-                    <label for="name">Expiring Date</label>
-                    <input type="text" name="name" id="name" placeholder="09-21">
-                </div>
-                <div class="input-line">
-                    <label for="name">CVC</label>
-                    <input type="text" name="name" id="name" placeholder="***">
-                </div>
-            </div>
 
-            <a href="orderconfirm.html"><input id=card type="button" value="Complete purchase"></a>
-            <input id=cash type="button" value="Cash On Delivery" style="margin-left: 250px;margin-top: -50px;">
-        </form>
+
+        <h2 class="form-title" style="margin-bottom: 70px;">Payment Details</h2>
+        <input id=back type="button" value="Go back" style="margin-left: 375px;margin-top: -120px;">
+        <p style="margin-top: 50px;">This webiste is yet to be published with a proper method of online payment - However we are offering a cash payment service without any service fee. </p>
+<!--        <form action="" class="checkout-form">-->
+<!--            <div class="input-line">-->
+<!--                <label for="name">Name on card</label>-->
+<!--                <input type="text" name="name" id="name" placeholder="Your name and surname">-->
+<!--            </div>-->
+<!--            <div class="input-line">-->
+<!--                <label for="name">Card number</label>-->
+<!--                <input type="text" name="name" id="name" placeholder="1111-2222-3333-4444">-->
+<!--            </div>-->
+<!--            <div class="input-container">-->
+<!--                <div class="input-line">-->
+<!--                    <label for="name">Expiring Date</label>-->
+<!--                    <input type="text" name="name" id="name" placeholder="09-21">-->
+<!--                </div>-->
+<!--                <div class="input-line">-->
+<!--                    <label for="name">CVC</label>-->
+<!--                    <input type="text" name="name" id="name" placeholder="***">-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <a href="orderconfirm.html"><input id=card type="button" value="Complete purchase" style="margin-top: 20px;"></a>
+
+<!--        </form>-->
     </div>
 
 </body>
@@ -121,7 +127,7 @@
     document.getElementById("back").addEventListener("click", myFunction2);
 
     function myFunction() {
-        window.location.href = "shipping.html";
+        window.location.href = "order_confirmation.html";
     }
 
     function myFunction2() {
