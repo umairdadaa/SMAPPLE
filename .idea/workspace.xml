@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68c07e16-5d14-431d-9611-6afef0398233" name="Changes" comment="Admin Navbar Update">
+    <list default="true" id="68c07e16-5d14-431d-9611-6afef0398233" name="Changes" comment="Dropdown menu - Products">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/edit_products_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/edit_products_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_customers_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_customers_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_order_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_order_admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_products_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_products_admin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +17,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/edit_products_admin.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/shipping.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_product.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/checkout2.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/login_admin.html" root0="SKIP_INSPECTION" />
   </component>
@@ -57,7 +55,8 @@
       <workItem from="1645210316978" duration="1760000" />
       <workItem from="1645214064357" duration="51000" />
       <workItem from="1645214266017" duration="608000" />
-      <workItem from="1645215254671" duration="1330000" />
+      <workItem from="1645215254671" duration="1408000" />
+      <workItem from="1645217001880" duration="934000" />
     </task>
     <task id="LOCAL-00001" summary="Removed Name Input from">
       <created>1645214518147</created>
@@ -66,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645214518147</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Admin Navbar Update">
+      <created>1645216615209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645216615209</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +104,7 @@
     <MESSAGE value="Removed Name Input from Shipping.html" />
     <MESSAGE value="Removed Name Input from" />
     <MESSAGE value="Admin Navbar Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Navbar Update" />
+    <MESSAGE value="Dropdown menu - Products" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dropdown menu - Products" />
   </component>
 </project>
