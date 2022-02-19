@@ -7,10 +7,7 @@
 }
 
 .title h8 {
-    font-family: "roboto", sans-serif;
     font-size: 40px;
-    font-style: italic;
-    font-weight: 400;
     font-weight: bold;
     color: black;
 }
@@ -26,14 +23,14 @@
 }
 
 .cart-info {
-    font-family: "roboto", sans-serif;
     display: flex;
     flex-wrap: wrap;
 }
 
 .cart-info a {
-    color: #0000cd;
-    font-size: 15px;
+    color: #d41d1d;
+    display: block;
+    text-decoration: none;
 }
 
 table {
@@ -48,7 +45,6 @@ th {
     text-align: left;
     padding: 25px;
     font-size: 23px;
-    font-family: "roboto", sans-serif;
     color: white;
     background: black;
     font-weight: normal;
@@ -71,10 +67,9 @@ td img {
     margin-right: 10px;
 }
 
-h1 {
-    font-family: "Roboto", sans-serif;
-    font-size: 19px;
-    color: #111;
+#cart-item-name{
+    font-size: 18px;
+    display: block;
 }
 
 td h2 {
@@ -139,7 +134,7 @@ td h2 {
     border: 0;
     border-radius: 5px;
     color: #fff;
-    background: #0000cd;
+    background: #59ab6e ;
     padding: 7px 15px;
     box-shadow: 0px 2px 4px 8px rgba(119, 119, 119, 0.2);
     cursor: pointer;
@@ -243,17 +238,15 @@ h5 {
 }
 
 span {
-    font-size: 0.7em;
     color: #777;
 }
 
-.btn {
-    text-transform: uppercase;
-    color: #000;
-    background: #fff;
-    border: 0;
+.update-btn {
+    color: #fff;
+    background: #59ab6e;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0px 2px 4px 8px rgba(119, 119, 119, 0.2);
+    margin-left: 215px;
 }
 
 .create-account-text {
@@ -263,4 +256,8 @@ span {
 .login-link {
     margin-top: 20px;
     text-align: center;
+}
+
+.profile-input{
+    width: 500px;
 }
