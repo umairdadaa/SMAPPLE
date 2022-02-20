@@ -4,24 +4,18 @@ include('common.php');
 output_header_navigation("Profile", "min_custom_custom")
 ?>
 
-<!---Start of the main content----->
-
 <!---Personal Info for profile page----->
 
-<!-- <div class="img"> -->
-<!-- <img src="assets/img/user.jpeg" width="50px" height="50px">&nbsp; -->
-
-
 <div class="profile-box">
-<img src="assets/img/user.jpeg" width="50px" height="50px" class="profile-img">&nbsp;
+    <img src="assets/img/user.jpeg" width="50px" height="50px" class="profile-img">&nbsp;
 
     <h1 class="profile-title">Personal Info</h1>
 
     <form>
         <label>Name</label>
-        <input type="text" placeholder="" class="profile-input"/>
+        <input type="text" placeholder="" class="profile-input" />
         <label>Email</label>
-        <input type="email" placeholder="" class="profile-input"/>
+        <input type="email" placeholder="" class="profile-input" />
         <label>Password</label>
         <input type="password" placeholder="" class="profile-input" />
         <button type="submit" class="submit-btn">Update</button>
