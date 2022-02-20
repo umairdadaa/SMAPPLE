@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "61f3fe2c335c5f8e50b46ce1"
+  },
+  "staff_name": "Pete",
+  "staff_email": "pete@gmail.com",
+  "staff_password": "fknfa181"
+},{
+  "_id": {
+    "$oid": "61f3fe2c335c5f8e50b46ce2"
+  },
+  "staff_name": "Umair",
+  "staff_email": "umair@gmail.com",
+  "staff_password": "Yolograt1290"
+}]

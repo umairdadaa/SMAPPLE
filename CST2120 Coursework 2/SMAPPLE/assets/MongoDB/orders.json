@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "61f404e3335c5f8e50b46cf2"
+  },
+  "customer_id": {
+    "$oid": "61f3fbe7335c5f8e50b46cdd"
+  },
+  "shipping_address": "Sharjah, Al Tawun St.",
+  "date": "28/01/2022",
+  "time": "13:00",
+  "cost": "AED 10710.25",
+  "products": [
+    [
+      {
+        "$oid": "61f3f370335c5f8e50b46cd9"
+      },
+      "Quantity: 2"
+    ],
+    [
+      {
+        "$oid": "61f3f370335c5f8e50b46cd8"
+      },
+      "Quantity: 1"
+    ]
+  ]
+}]

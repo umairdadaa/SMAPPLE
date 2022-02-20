@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "61f3fbe7335c5f8e50b46cdd"
+  },
+  "Customer_First_Name": "Sami",
+  "Customer_Last_Name": "Baig",
+  "Customer_email": "sami@gmail.com",
+  "Customer_password": "Abjas12@esa",
+  "Gender": "Male",
+  "Date_of_birth": "28/10/2000",
+  "Profile_image_url": "images/display-picture.jpeg",
+  "Shipping_address": "Sharjah, Al Tawun St."
+},{
+  "_id": {
+    "$oid": "61f3fbe7335c5f8e50b46cde"
+  },
+  "Customer_First_Name": "Umair",
+  "Customer_Last_Name": "Dada",
+  "Customer_email": "umair@gmail.com",
+  "Customer_password": "Yolograt1290",
+  "Gender": "Male",
+  "Date_of_birth": "06/03/2002",
+  "Profile_image_url": "images/myprofile.jpeg",
+  "Shipping_address": "Dubai, Al Furjan"
+}]

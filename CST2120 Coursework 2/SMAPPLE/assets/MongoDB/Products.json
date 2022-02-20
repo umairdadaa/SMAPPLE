@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "61f3f370335c5f8e50b46cd5"
+  },
+  "Name": "iphone 13 Pro",
+  "Brand": "Apple",
+  "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+  "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+  "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+  "image_url": "images/iphone13pro.jpeg",
+  "price": "AED 3,999"
+},{
+  "_id": {
+    "$oid": "61f3f370335c5f8e50b46cd6"
+  },
+  "Name": "iphone 13 Pro MAX",
+  "Brand": "Apple",
+  "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+  "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+  "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+  "image_url": "images/iphone13max.jpeg",
+  "price": "AED 4,200"
+},{
+  "_id": {
+    "$oid": "61f3f370335c5f8e50b46cd7"
+  },
+  "Name": "Iphone 13",
+  "Brand": "Apple",
+  "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+  "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+  "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+  "image_url": "images/iphone13.jpeg",
+  "price": "AED 3,700"
+},{
+  "_id": {
+    "$oid": "61f3f370335c5f8e50b46cd8"
+  },
+  "Name": "Galaxy S21 Ultra",
+  "Brand": "Samsung",
+  "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+  "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+  "Capacity": "[\"256GB\",\"512GB\"]",
+  "image_url": "images/S21Ultra.jpeg",
+  "price": "AED 3,999"
+},{
+  "_id": {
+    "$oid": "61f3f370335c5f8e50b46cd9"
+  },
+  "Name": "Galaxy S21 Plus",
+  "Brand": "Samsung",
+  "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+  "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+  "Capacity": "[\"128GB\",\"256GB\"]",
+  "image_url": "images/S21Plus.jpeg",
+  "price": "AED 2,999"
+},{
+  "_id": {
+    "$oid": "61f3f370335c5f8e50b46cda"
+  },
+  "Name": "Galaxy S21",
+  "Brand": "Samsung",
+  "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+  "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+  "Capacity": "[\"128GB\",\"256GB\"]",
+  "image_url": "images/S21.jpeg",
+  "price": "AED 2,500"
+}]
