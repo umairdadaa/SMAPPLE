@@ -27,7 +27,7 @@
 
 <body>
     <div style="padding-top: 100px"></div>
-    <a href="login.html" style="text-decoration: none; display: inline-block; padding: 8px 16px">&laquo; Back</a
+    <a href="login.php" style="text-decoration: none; display: inline-block; padding: 8px 16px">&laquo; Back</a
     >
     <div class="login-box">
       <h1>Admin Login</h1>
@@ -37,7 +37,7 @@
         <label>Password</label>
         <input type="password" required/>
         <button type="submit" class="submit-btn">
-          <a href="view_customers_admin.html" style="text-decoration: none; color: white"
+          <a href="view_customers_admin.php" style="text-decoration: none; color: white"
             >Login</a
           >
         </button>
