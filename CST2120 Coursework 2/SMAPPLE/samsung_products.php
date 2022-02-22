@@ -38,121 +38,129 @@
 
       <div style="padding-bottom: 100px;"></div>
 
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card">
-            <a href="view_product.php">
-              <img src="assets/img/samsung21.png" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <ul class="list-unstyled d-flex justify-content-between">
-                <li>
-                  <h5>Galaxy S21</h5>
-                </li>
-                <li class=" text-right">AED3124.99</li>
-              </ul>
+      
+  <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
+                <!-- <div class="col">
+                  <div class="card">
+                      
+                        <img src="assets/img/samsung21.png" class="card-img-top" alt="...">
+                        
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <h5>Galaxy S21</h5>
+                                </li>
+                                <li class=" text-right">AED3124.99</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
+                    </div>
+                  </div>
+      
+                <div class="col">
+                    <div class="card">
+                      
+                            <img src="./assets/img/samsung21.png" class="card-img-top" alt="...">
+                       
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <h5>Galaxy S21 Ultra 5G</h5>
+                                </li>
+                                <li class=" text-right">AED3124.99</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                       
+                            <img src="./assets/img/samsung21.png" class="card-img-top" alt="...">
+                      
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <h5>Galaxy S20</h5>
+                                </li>
+                                <li class=" text-right">AED3124.99</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
+                    </div> 
+                  </div>-->
+                  
             </div>
-            <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <a href="view_product.php">
-              <img src="./assets/img/samsung21.png" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <ul class="list-unstyled d-flex justify-content-between">
-                <li>
-                  <h5>Galaxy S21 Ultra 5G</h5>
-                </li>
-                <li class=" text-right">AED3124.99</li>
-              </ul>
-            </div>
-            <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
 
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <a href="view_product.php">
-              <img src="./assets/img/samsung21.png" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <ul class="list-unstyled d-flex justify-content-between">
-                <li>
-                  <h5>Galaxy S20</h5>
-                </li>
-                <li class=" text-right">AED3124.99</li>
-              </ul>
-            </div>
-            <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
-          </div>
-        </div>
+    </section>
 
-  </section>
+    <script>
+        //Download products when page loads
+        window.onload = loadProducts;
 
-  <!-- Start SAMSUNG Product -->
-  <section class="bg-light">
-    <div class="container py-5">
-      <div class="row text-center py-3">
-      </div>
+        //Downloads JSON description of products from server
+        function loadProducts() {
+            //Create request object 
+            let request = new XMLHttpRequest();
 
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card">
-            <a href="view_product.php">
-              <img src="assets/img/samsung21.png" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <ul class="list-unstyled d-flex justify-content-between">
-                <li>
-                  <h5>Galaxy S21</h5>
-                </li>
-                <li class=" text-right">AED3124.99</li>
-              </ul>
-            </div>
-            <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <a href="view_product.php">
-              <img src="./assets/img/samsung21.png" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <ul class="list-unstyled d-flex justify-content-between">
-                <li>
-                  <h5>Galaxy S21 Ultra 5G</h5>
-                </li>
-                <li class=" text-right">AED3124.99</li>
-              </ul>
-            </div>
-            <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
+            //Create event handler that specifies what should happen when server responds
+            request.onload = () => {
+                //Check HTTP status code
+                if (request.status === 200) {
+                    //Add data from server to page
+                    displayProducts(request.responseText);
+                } else
+                    alert("Error communicating with server: " + request.status);
+            };
 
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <a href="view_product.php">
-              <img src="./assets/img/samsung21.png" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <ul class="list-unstyled d-flex justify-content-between">
-                <li>
-                  <h5>Galaxy S20</h5>
-                </li>
-                <li class=" text-right">AED3124.99</li>
-              </ul>
-            </div>
-            <button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>
-          </div>
-        </div>
+            //Set up request and send it
+            request.open("GET", "samsung.php");
+            request.send();
+        }
 
-  </section>
+        //Loads products into page
+        function displayProducts(jsonProducts) {
+            //Convert JSON to array of product objects
+            let prodArray = JSON.parse(jsonProducts);
+
+            //Create HTML table containing product data
+            let htmlStr = "";
+            for (let i = 0; i < prodArray.length; ++i) {
+                //htmlStr += "<tr>";
+                //htmlStr += "<td>" + prodArray[i].name + "</td>";
+                //htmlStr += "<td><img width=50 height=50 src='" + prodArray[i].image_url + "'></td>";
+                //htmlStr += "<td>£" + prodArray[i].price + "</td>";
+                //htmlStr += "</tr>";
+
+                htmlStr += '<div class="col">';
+                htmlStr += '<div class="card">';
+                htmlStr += '<a href="view_product.html">';
+                htmlStr += '<img src="' + prodArray[i].image_url +
+                    '" class="card-img-top" alt="...">';
+                htmlStr += '</a>';
+                htmlStr += '<div class="card-body">';
+                htmlStr += '<ul class="list-unstyled d-flex justify-content-between">';
+                htmlStr += '<li>';
+                htmlStr += '<h5>' + prodArray[i].Name +
+                    '</h5>';
+               
+                htmlStr += '</li>';
+                htmlStr += '<li class="text-right">' + prodArray[i].price + ' AED </li>';
+                htmlStr += '</ul>';
+                htmlStr += '</div>';
+                htmlStr += '<button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>';
+                htmlStr += '</div>';
+                htmlStr += '</div>';
+
+            }
+            //Finish off table and add to document
+
+            document.querySelector("#product-container").innerHTML = htmlStr;
+        }
+    </script>
 
 
-
-  <br><br><br><br>
 
   <?php
 

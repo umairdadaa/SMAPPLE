@@ -22,7 +22,7 @@ output_header_navigation("Home", "min_custom_index")
     <div class="container py-5">
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">Recommeded Products</h1>
+                <h1 class="h1">Recommended Products</h1>
             </div>
         </div>
 
@@ -30,12 +30,12 @@ output_header_navigation("Home", "min_custom_index")
             <div class="col">
                 <div class="card">
                     <a href="view_product.php">
-                        <img src="assets/img/iphone13.png" class="card-img-top" alt="...">
+                        <img src="assets/img/iphoneSE.png" class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between">
                             <li>
-                                <h5>iPhone 13 Pro</h5>
+                                <h5>Iphone SE</h5>
                             </li>
                             <li class=" text-right">AED3124.99</li>
                         </ul>
@@ -63,12 +63,12 @@ output_header_navigation("Home", "min_custom_index")
             <div class="col">
                 <div class="card">
                     <a href="view_product.php">
-                        <img src="./assets/img/iphone12.png" class="card-img-top" alt="...">
+                        <img src="./assets/img/iphoneX.png" class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between">
                             <li>
-                                <h5>iPhone 12</h5>
+                                <h5>Iphone XR</h5>
                             </li>
                             <li class=" text-right">AED3124.99</li>
                         </ul>
