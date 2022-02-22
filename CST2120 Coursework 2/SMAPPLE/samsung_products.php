@@ -12,7 +12,7 @@
         <div class="col-lg-6 m-auto">
           <h1 class="h1">Samsung</h1>
 
-          <form class="search" action="#">
+          <form class="search" action="find_samsung_products.php" method="get">
             <input type="text" placeholder="Search" name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
