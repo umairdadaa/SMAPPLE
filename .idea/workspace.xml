@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="68c07e16-5d14-431d-9611-6afef0398233" name="Changes" comment="Dropdown menu - Products">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/apple.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/apple.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,16 +19,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/edit_products_admin.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/shipping.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/view_product.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/checkout2.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/login_admin.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.0">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../../../../../../php/pear" />
+    </include_path>
+  </component>
   <component name="ProblemsViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="25IMmgz5S5pCnH5aP0I3PY8A6en" />
@@ -39,10 +43,16 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mongo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" nameIsGenerated="true" document_root="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -57,6 +67,7 @@
       <workItem from="1645214266017" duration="608000" />
       <workItem from="1645215254671" duration="1408000" />
       <workItem from="1645217001880" duration="934000" />
+      <workItem from="1645629806342" duration="6939000" />
     </task>
     <task id="LOCAL-00001" summary="Removed Name Input from">
       <created>1645214518147</created>
