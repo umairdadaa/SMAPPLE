@@ -1,7 +1,7 @@
 <?php
 
 //Include libraries
-require __DIR__ . './vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
     
 //Create instance of MongoDB client
 $mongoClient = (new MongoDB\Client);
@@ -16,7 +16,7 @@ $findCriteria = [
  ];
 
 //Find all of the customers that match  this criteria
-$cursor = $db->Product->find($findCriteria);
+$cursor = $db->Products->find($findCriteria);
 
 
 $jsonStr = '['; //Start of array of customers in JSON
