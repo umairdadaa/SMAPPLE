@@ -14,7 +14,7 @@
 
           <form class="search" action="find_samsung_products.php" method="get">
             <input type="text" placeholder="Search" name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button id="searchBtn"><i class="fa fa-search"></i>Search</button>
           </form>
           <div class="filters">
             <div>
@@ -99,10 +99,29 @@
         //Download products when page loads
         window.onload = loadProducts;
 
+        var button = document.getElementById("searchBtn");
+        button.addEventListener("click", function(){
+           let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(request.readyState == XMLHttpRequest.DONE){
+                    var arr = new Array();
+                    arr = JSON.parse(xhr.responseText);
+                    for(var i =0; i < arr.length; i++){
+                        console.log(arr[i]);
+                    }
+                }
+
+                xhr.open('POST', 'find_samsung_products.php', true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-encoded");
+
+                xhr.send("search=s21");
+            }
+        });
         //Downloads JSON description of products from server
         function loadProducts() {
             //Create request object 
             let request = new XMLHttpRequest();
+
 
             //Create event handler that specifies what should happen when server responds
             request.onload = () => {
@@ -110,6 +129,7 @@
                 if (request.status === 200) {
                     //Add data from server to page
                     displayProducts(request.responseText);
+
                 } else
                     alert("Error communicating with server: " + request.status);
             };

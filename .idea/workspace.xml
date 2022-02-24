@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68c07e16-5d14-431d-9611-6afef0398233" name="Changes" comment="Dropdown menu - Products">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/apple.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/apple.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung_products.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,23 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
@@ -68,6 +85,8 @@
       <workItem from="1645215254671" duration="1408000" />
       <workItem from="1645217001880" duration="934000" />
       <workItem from="1645629806342" duration="6939000" />
+      <workItem from="1645654575309" duration="2116000" />
+      <workItem from="1645690976140" duration="13019000" />
     </task>
     <task id="LOCAL-00001" summary="Removed Name Input from">
       <created>1645214518147</created>

@@ -8,7 +8,7 @@ $mongoClient = (new MongoDB\Client);
 
 
 //Select a database
-$db = $mongoClient->Smapple;
+$db = $mongoClient->test_db;
 $findCriteria = [
 
     "Brand" => "Samsung",
@@ -16,7 +16,7 @@ $findCriteria = [
  ];
 
 //Find all of the customers that match  this criteria
-$cursor = $db->Products->find($findCriteria);
+$cursor = $db->products->find($findCriteria);
 
 
 $jsonStr = '['; //Start of array of customers in JSON
