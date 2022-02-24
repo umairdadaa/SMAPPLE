@@ -250,3 +250,10 @@ div {
 /* Extra large devices (large desktops, 1200px and up)*/
 
 @media (min-width: 1200px) {}
+
+#admin-edit-products{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}

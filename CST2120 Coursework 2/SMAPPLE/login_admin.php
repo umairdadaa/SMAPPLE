@@ -37,7 +37,7 @@
         <label>Password</label>
         <input type="password" required/>
         <button type="submit" class="submit-btn">
-          <a href="view_customers_admin.php" style="text-decoration: none; color: white"
+          <a href="view_products_admin.php" style="text-decoration: none; color: white"
             >Login</a
           >
         </button>

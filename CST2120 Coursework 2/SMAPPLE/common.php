@@ -216,13 +216,10 @@ function output_admin_navigation($title){
     echo '<a class="nav-link" href="view_products_admin.php" style="margin-left: -20px">View Products</a>';
     echo '</li>';
     echo '<li class="nav-item">';
-    echo '<a class="nav-link" href="edit_products_admin.php">Edit Products</a>';
+    echo '<a class="nav-link" href="add_products_admin.php">Add Products</a>';
     echo '</li>';
     echo '<li class="nav-item">';
     echo '<a class="nav-link" href="view_order_admin.php">View Orders</a>';
-    echo '</li>';
-    echo '<li class="nav-item">';
-    echo '<a class="nav-link" href="view_customers_admin.php" style="margin-right: 20px">View Customers</a>';
     echo '</li>';
     echo '</ul>';
     echo '</div>';

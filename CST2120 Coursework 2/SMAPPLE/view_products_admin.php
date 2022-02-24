@@ -2,44 +2,61 @@
 include('common.php');
 
 output_admin_navigation("View Products")
+
+
+
 ?>
 
+<h1 style="margin-left: 600px; margin-bottom: 50px;margin-top: 100px">View Products</h1>
 
-<div class="page-header" style="margin-left: 600px; margin-bottom: 50px;margin-top: 100px">
-    <h1>View Products</h1>
-</div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Product ID#</th>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Samsung S21 Ultra</td>
-            <td>100</td>
-            <td>3,999</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Iphone 13 PRO MAX</td>
-            <td>100</td>
-            <td>4,999</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Iphone 12</td>
-            <td>100</td>
-            <td>2,999</td>
-        </tr>
-    </tbody>
-</table>
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.js"></script>
+
+<script>
+    //Download products when page loads
+    window.onload = loadProducts;
+
+    //Downloads JSON description of products from server
+    function loadProducts() {
+        //Create request object 
+        let request = new XMLHttpRequest();
+
+        //Create event handler that specifies what should happen when server responds
+        request.onload = () => {
+            //Check HTTP status code
+            if (request.status === 200) {
+                //Add data from server to page
+                displayProducts(request.responseText);
+            } else
+                alert("Error communicating with server: " + request.status);
+        };
+
+        //Set up request and send it
+        request.open("GET", "get_products.php");
+        request.send();
+    }
+
+    //Loads products into page
+    function displayProducts(jsonProducts) {
+        //Convert JSON to array of product objects
+        let prodArray = JSON.parse(jsonProducts);
+
+        //Create HTML table containing product data
+        let htmlStr = "<table>";
+        for (let i = 0; i < prodArray.length; ++i) {
+            htmlStr += "<tr>";
+            htmlStr += "<td>" + Object.values(prodArray[i]._id)[0] + "</td>";
+            htmlStr += "<td>" + prodArray[i].name + "</td>";
+            htmlStr += "<td>" + prodArray[i].brand + "</td>";
+            htmlStr += "<td>" + prodArray[i].description + "</td>";
+            htmlStr += "<td>" + prodArray[i].color + "</td>";
+            htmlStr += "<td>" + prodArray[i].capacity + "</td>";
+            htmlStr += "<td>" + prodArray[i].price + "</td>";
+            htmlStr += "</tr>";
+        }
+        //Finish off table and add to document
+        htmlStr += "</table>";
+        document.getElementById("products").innerHTML = htmlStr;
+    }
+</script>
 
 </body>
 
