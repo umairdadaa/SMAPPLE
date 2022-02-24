@@ -2,31 +2,41 @@
 
 //Include libraries
 require __DIR__ . '/vendor/autoload.php';
-    
+
 //Create instance of MongoDB client
 $mongoClient = (new MongoDB\Client);
 
 //Select a database
-$db = $mongoClient->ecommerce;
+$db = $mongoClient->Smapple;
 
 //Select a collection 
-$collection = $db->customers;
+$collection = $db->Customers;
 
-//Test data - this would be a JSON string sent to the server and extracted from $_POST
-$testCustomerData = '{"name": "Anne Smith", "email":"anne@example.com", "password": "1234"}'; 
+
+$email = filter_input(INPUT_POST, 'email', FILTER_UNSAFE_RAW);
+
+$findCriteria = ["email" => $email];
+
+$resultArray = $db->Customers->find($findCriteria) ->toArray();
+
 
 //Convert JSON string to PHP  array. 'true' converts to array instead of PHP object.
-$customerDataArray = json_decode($testCustomerData, true);
+if (count($resultArray) == 0) {
+    $customerDataArray = json_decode($_POST['user'], true);
 
-//Add the new product to the database
-$insertResult = $collection->insertOne($customerDataArray);
-    
-//Echo result back to user
-if($insertResult->getInsertedCount()==1){
-    echo 'Customer added.';
-    echo ' New document id: ' . $insertResult->getInsertedId();
-}
-else {
-    echo 'Error adding customer';
-}
+    //Add new product to the database
+    $insertResult = $collection->insertOne($customerDataArray);
 
+    //Echo result back to user
+
+    if ($insertResult->getInsertedCount() == 1) {
+        echo 'Registration Successful';
+        return;
+    } else {
+        echo 'Sorry, an error occured';
+        return;
+    }
+} else {
+    echo 'Email already exits. Please login again.';
+    return;
+}
