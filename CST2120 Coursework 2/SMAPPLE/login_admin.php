@@ -1,49 +1,69 @@
-<!DOCTYPE html>
-<html>
+<?php
+include('common.php');
 
-<head>
-    <!-----Title of the Page-------->
-    <title>SMAPPLE - Admin Login</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" type="text/css" href="assets/css/stylereg.css" />
-
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap-custom.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
-
-    <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
-
-    <!----Used this link for the icons----->
-</head>
+admin_login_header()
+?>
 
 <!------ Start of body------->
 
 <body>
-    <div style="padding-top: 100px"></div>
-    <a href="login.php" style="text-decoration: none; display: inline-block; padding: 8px 16px">&laquo; Back</a
-    >
-    <div class="login-box">
-      <h1>Admin Login</h1>
-      <form>
-        <label>Email</label>
-        <input type="email" required/>
-        <label>Password</label>
-        <input type="password" required/>
-        <button type="submit" class="submit-btn">
-          <a href="view_products_admin.php" style="text-decoration: none; color: white"
-            >Login</a
-          >
-        </button>
-      </form>
-    </div>
-  </body>
-  <!---End of body----->
+  <div style="padding-top: 100px"></div>
+  <a href="login.php" style="text-decoration: none; display: inline-block; padding: 8px 16px">&laquo; Back</a>
+  <div class="login-box">
+    <h1>Admin Login</h1>
+    <p id="LoginPara" onsubmit="return false">
+      <label>Username</label>
+      <input type="text" name="staff_username" id="username" required />
+      <label>Password</label>
+      <input type="password" name="admin_password" id="password" required />
+      <button type="submit" onclick="login()" class="submit-btn">Login</button>
+    </p>
+  </div>
+
+  <script>
+    //Global variables 
+    let loggedInStr = "Logged in <button onclick='logout()'>Logout</button>";
+    let loginStr = document.getElementById("LoginPara").innerHTML;
+
+
+    function login() {
+
+      let request = new XMLHttpRequest();
+
+      request.onload = function() {
+        //Check HTTP status code
+
+        if (request.status === 200) {
+          //Get data from server
+          var responseData = request.responseText;
+
+          //Add data to page
+          if (responseData === "ok") {
+            alert("Logged in successfully 😄 Welcome to CMS")
+            location.href = 'add_products_admin.php'
+          } else {
+            alert(responseData)
+            document.getElementById("ErrorMessages").innerHTML = request.responseText;
+          }
+        } else {
+          document.getElementById("ErrorMessages").innerHTML = "Error communicating with server" + request.status;
+        }
+      };
+      //Extract login data
+      let usrName = document.getElementById("username").value;
+      let usrPassword = document.getElementById("password").value;
+
+      //Set up and send request
+      request.open("POST", "staff_login.php");
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      request.send("username=" + usrName + "&password=" + usrPassword);
+    }
+
+  </script>
+
+
+</body>
+<!---End of body----->
+
 </html>
 <!---End of the html code----->

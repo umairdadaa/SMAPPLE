@@ -24,8 +24,12 @@ output_header_navigation("Register", "")
             <option value="Male">Male</option>
         </select>
         <label>Password</label>
-        <input type="password" placeholder="At least 6 characters" name="password" id="password" required />
+        <input type="password" placeholder="At least 6 characters" name="password" id="password" minlength="6" required />
         <p>Passwords must be at least 6 characters</p>
+
+        <label>Shipping Address</label>
+        <input type="text" name="shipping_address" id="shipping_address" placeholder="Flat Number / Building Name" required />
+
         <button type="submit" class="submit-btn" onclick="register()">Create your Smapple Acoount</button>
     </form>
 
@@ -39,9 +43,7 @@ output_header_navigation("Register", "")
     Already have an account? <a href="login.php">Login here</a>
 </p>
 </div>
-<p>
-    Server response: <span id="ServerResponse"></span>
-</p>
+
 
 <!-- End Content -->
 
@@ -61,6 +63,7 @@ output_footer()
             date_of_birth: document.getElementById("date_of_birth").value,
             gender: document.getElementById("form").gender.value,
             password: document.getElementById("password").value,
+            shipping_address: document.getElementById("shipping_address").value,
         }
 
         request.onload = function() {
@@ -71,11 +74,9 @@ output_footer()
                 var responseData = request.responseText;
 
                 //Add data to page
-                if (responseData == "Registered Successfully" || responseData == "Email exists already. Login") {
+                if (responseData == "Registered Successfully 😄" || responseData == "Email exists already. Login") {
                     alert(responseData)
                     location.href = 'login.php'
-                    // document.getElementById("LoginPara").innerHTML = loggedInStr;
-                    // document.getElementById("ErrorMessages").innerHTML = ""; //Clear error messages
                 } else {
                     alert(responseData)
                     document.getElementById("ErrorMessages").innerHTML = request.responseText;
@@ -89,7 +90,7 @@ output_footer()
         let usrPassword = document.getElementById("password").value;
 
         //Set up and send request
-        request.open("POST", "add_customer_json.php");
+        request.open("POST", "add_customer.php");
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 
@@ -100,7 +101,8 @@ output_footer()
             user.email === "" ||
             user.date_of_birth === "" ||
             user.gender === "" ||
-            user.password === ""
+            user.password === "" ||
+            user.shipping_address === ""
         ) {
             alert("Please enter all the details");
             event.preventDefault();

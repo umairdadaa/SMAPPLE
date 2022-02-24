@@ -50,9 +50,8 @@ output_header_navigation("Login", "")
 
                 //Add data to page
                 if (responseData === "ok") {
+                    alert("Logged in successfully 😄")
                     location.href = 'home.php'
-                    // document.getElementById("LoginPara").innerHTML = loggedInStr;
-                    // document.getElementById("ErrorMessages").innerHTML = ""; //Clear error messages
                 } else {
                     alert(responseData)
                     document.getElementById("ErrorMessages").innerHTML = request.responseText;
@@ -70,8 +69,6 @@ output_header_navigation("Login", "")
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         request.send("email=" + usrEmail + "&password=" + usrPassword);
     }
-    //Attempts to log in user to server
-    //Create event handler that specifies what should happen when server responds
 
     //Logs the user out.
     function logout() {
