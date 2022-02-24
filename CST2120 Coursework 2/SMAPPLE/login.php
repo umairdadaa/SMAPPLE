@@ -11,9 +11,9 @@ output_header_navigation("Login", "")
     <h1>Login</h1>
     <p id="LoginPara" onsubmit="return false">
         <label>Email</label>
-        <input type="email" name="customer_email" id="email" required>
+        <input type="email" name="customer_email" id="email" class="login-input" required>
         <label>Password</label>
-        <input type="password" name="customer_password" id="password" required />
+        <input type="password" name="customer_password" id="password" class="login-input" required />
         <button type="submit" onclick="login()" class="submit-btn">Continue</button>
     <p style="color: red" id="ErrorMessages"></p>
     </p>

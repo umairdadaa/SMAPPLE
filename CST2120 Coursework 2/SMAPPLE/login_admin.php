@@ -13,9 +13,9 @@ admin_login_header()
     <h1>Admin Login</h1>
     <p id="LoginPara" onsubmit="return false">
       <label>Username</label>
-      <input type="text" name="staff_username" id="username" required />
+      <input type="text" name="staff_username" id="username" class="admin-input" required />
       <label>Password</label>
-      <input type="password" name="admin_password" id="password" required />
+      <input type="password" name="admin_password" id="password" class="admin-input" required />
       <button type="submit" onclick="login()" class="submit-btn">Login</button>
     </p>
   </div>
@@ -58,7 +58,6 @@ admin_login_header()
       request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       request.send("username=" + usrName + "&password=" + usrPassword);
     }
-
   </script>
 
 
