@@ -1,6 +1,6 @@
 <?php
 include('common.php');
-
+session_start();
 output_header_navigation("About Us", "min_custom")
 ?>
 

@@ -1,5 +1,12 @@
 <?php
 
+include('common.php');
+output_admin_navigation("Update Products");
+?>
+<?php
+
+session_start();
+
 //Include libraries
 require __DIR__ . '/vendor/autoload.php';
     
@@ -20,11 +27,20 @@ $findCriteria = [
 //Find all of the customers that match  this criteria
 $cursor = $db->Products->find($findCriteria);
 
+
 //Output the results as forms
-echo "<h1>Products</h1>";   
+echo "<h1 style='margin-left: 600px; margin-bottom: 50px;margin-top: 10px'>Update Products</h1>";  
+
 foreach ($cursor as $cust){
-    echo '<form action="replace_products.php" method="post">';
+    echo '<form action="replace_products.php" method="post" style="display: flex; flex-wrap: wrap; flex-direction: column;
+    align-content: center;">';
     echo 'Name: <input type="text" name="name" value="' . $cust['name'] . '" required><br>';
+    echo 'Brand: <input type="text" name="brand" value="' . $cust['brand'] . '" required><br>';
+    echo 'Description: <input type="text" name="description" value="' . $cust['description'] . '" required><br>';
+    echo 'Color: <input type="text" name="color" value="' . $cust['color'] . '" required><br>';
+    echo 'Capacity: <input type="text" name="capacity" value="' . $cust['capacity'] . '" required><br>';
+    echo 'Price: <input type="text" name="price" value="' . $cust['price'] . '" required><br>';
+    echo 'Keywords: <input type="text" name="keywords" value="' . $cust['keywords'] . '" required><br>';
     echo '<input type="hidden" name="id" value="' . $cust['_id'] . '" required>'; 
     echo '<input type="submit">';
     echo '</form><br>';

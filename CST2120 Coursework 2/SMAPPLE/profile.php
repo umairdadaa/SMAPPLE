@@ -11,7 +11,7 @@ output_header_navigation("Profile", "min_custom_custom")
 
     <h1 class="profile-title">Personal Info</h1>
 
-    <form>
+    <form action="profile.php" method="post">
         <label>Name</label>
         <input type="text" placeholder="" class="profile-input" />
         <label>Email</label>
@@ -73,7 +73,23 @@ output_header_navigation("Profile", "min_custom_custom")
 
 <br><br><br>
 
-<!------End of the Main Content-------->
+
+<script>
+    window.onload = function() {
+
+        let request = new XMLHttpRequest();
+
+        request.onload = () => {
+            if (request.status === 200) {
+                display_products(request.response)
+            } else alert("Error communicating with server: " + request.status)
+        }
+
+        request.open("GET", "get_profile_info.php");
+        request.send();
+    };
+</script>
+
 <?php
 
 output_footer()

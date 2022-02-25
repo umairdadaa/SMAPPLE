@@ -1,6 +1,6 @@
 <?php
 include('common.php');
-
+session_start();
 output_header_navigation("Home", "min_custom_index")
 ?>
 
@@ -9,7 +9,7 @@ output_header_navigation("Home", "min_custom_index")
     <button class="apple-button"><a href="apple_products.php" class="home-button-tag"><b>CLICK HERE FOR APPLE PHONES</b></a></button>
     <button class="samsung-button"><a href="samsung_products.php" class="home-button-tag"><b>CLICK HERE FOR SAMSUNG PHONES</b></a></button>
 
-    <!-- <h1 style="top: 21%; left: 38%; position: absolute;" class="display-4">Need a phone?</h1> -->
+
 
     <img src="assets/img/home_page_bg.jpg" class="img-fluid mx-auto d-block" alt="hero-image" style="width: 100%;">
 </div>

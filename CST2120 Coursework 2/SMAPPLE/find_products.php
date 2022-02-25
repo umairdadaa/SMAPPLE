@@ -22,7 +22,7 @@
 </style>
 
 <?php
-
+session_start();
 include ('common.php');
 output_header_navigation("Samsung Products", "min_custom_index");
 
