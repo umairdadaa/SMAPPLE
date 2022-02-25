@@ -10,7 +10,7 @@
         transition: all 0.5s ease;
         text-align: center;
         border: 1px solid black;
-        font-size: 1.5em;
+        /*font-size: 1.5em;*/
         background-color: #0b5ed7;
         border-radius: 12px;
         padding: 10px 15px;
@@ -36,7 +36,7 @@ require __DIR__ . '/vendor/autoload.php';
 $mongoClient = (new MongoDB\Client);
 
 //Select a database
-$db = $mongoClient->test_db->products;
+$db = $mongoClient->Smapple->Products;
 
 
 $search_string= filter_input(INPUT_GET,'Name', FILTER_SANITIZE_STRING);
@@ -71,15 +71,15 @@ foreach($cursor as $reccord){
     echo "<p>";
     echo "<img class='imgphp'; src='".$reccord['image_url']."'/>";
     echo "<p>";
-    echo $reccord['Brand'];
+    echo "Brand Name: ".$reccord['Brand'];
     echo "<p>";
-    echo $reccord['Name'];
+    echo "Product: ".$reccord['Name'];
     echo "<p>";
-    echo $reccord['Color'];
+    echo "Colors Available: ".$reccord['Color'];
     echo "<p>";
-    echo $reccord['price'];
+    echo "Price: ".$reccord['price'];
     echo "<p>";
-    echo "<input class='submit' type='submit' name='submit'>";
+    echo "<button class='submit' type='submit' name='Submit'>Add To Cart</button>";
     echo "<p>";
     echo "_______________________________________";
 
@@ -99,7 +99,7 @@ foreach($cursor as $reccord){
 //echo '</p></div>';
 //echo '</a>';
 //echo '<input type="text" name="Name" value="'.$cust['Name'].'" style="visibility: hidden ; height:0px; width:0px;" >';
-//echo '</form>';
+//echo '</form>';A
 //}
 
 //$getbacktome = $db.Products.find(['$text'=>['$search' =>$search_string]]);

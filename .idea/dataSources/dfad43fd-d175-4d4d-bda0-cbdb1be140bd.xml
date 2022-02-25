@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Smapple@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.32">
+    <root id="1">
+      <ServerVersion>5.0.6</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="Products"/>
+    <schema id="3" parent="1" name="Smapple">
+      <Current>1</Current>
+    </schema>
+    <schema id="4" parent="1" name="admin"/>
+    <schema id="5" parent="1" name="config"/>
+    <schema id="6" parent="1" name="local"/>
+    <schema id="7" parent="1" name="mydb"/>
+    <schema id="8" parent="1" name="test"/>
+    <schema id="9" parent="1" name="test_db"/>
+    <schema id="10" parent="1" name="week14"/>
+    <table id="11" parent="3" name="Cart"/>
+    <table id="12" parent="3" name="Customers"/>
+    <table id="13" parent="3" name="Orders"/>
+    <table id="14" parent="3" name="Products"/>
+    <table id="15" parent="3" name="Staff"/>
+    <column id="16" parent="11" name="_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="17" parent="11" name="cost">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="18" parent="11" name="customer_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="19" parent="11" name="date">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="20" parent="11" name="products">
+      <DataType>Array|2003s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="21" parent="11" name="time">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="22" parent="11" name="session_id">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="23" parent="12" name="_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="24" parent="12" name="Customer_First_Name">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="25" parent="12" name="Gender">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="26" parent="12" name="Profile_image_url">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="27" parent="12" name="Customer_Last_Name">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="28" parent="12" name="Shipping_address">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="29" parent="12" name="Customer_email">
+      <DataType>String|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="30" parent="12" name="Customer_password">
+      <DataType>String|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="31" parent="12" name="Date_of_birth">
+      <DataType>String|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="32" parent="13" name="_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="33" parent="13" name="cost">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="34" parent="13" name="customer_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="35" parent="13" name="date">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="36" parent="13" name="products">
+      <DataType>Array|2003s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="37" parent="13" name="shipping_address">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="38" parent="13" name="time">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="39" parent="14" name="_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="40" parent="14" name="Brand">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="41" parent="14" name="Description">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="42" parent="14" name="Name">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="43" parent="14" name="image_url">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="44" parent="14" name="Capacity">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="45" parent="14" name="keywords">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="46" parent="14" name="Color">
+      <DataType>String|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="47" parent="14" name="price">
+      <DataType>String|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="48" parent="15" name="_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="49" parent="15" name="staff_email">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="50" parent="15" name="staff_name">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="51" parent="15" name="staff_password">
+      <DataType>String|12s</DataType>
+      <Position>3</Position>
+    </column>
+  </database-model>
+</dataSource>

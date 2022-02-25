@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test_db@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.32">
+    <root id="1">
+      <ServerVersion>5.0.6</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="Products"/>
+    <schema id="3" parent="1" name="Smapple"/>
+    <schema id="4" parent="1" name="admin"/>
+    <schema id="5" parent="1" name="config"/>
+    <schema id="6" parent="1" name="local"/>
+    <schema id="7" parent="1" name="mydb"/>
+    <schema id="8" parent="1" name="test"/>
+    <schema id="9" parent="1" name="test_db">
+      <Current>1</Current>
+    </schema>
+    <schema id="10" parent="1" name="week14"/>
+    <table id="11" parent="9" name="products"/>
+    <column id="12" parent="11" name="_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="13" parent="11" name="Brand">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="14" parent="11" name="Capacity">
+      <DataType>String|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="15" parent="11" name="Color">
+      <DataType>String|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="16" parent="11" name="Description">
+      <DataType>String|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="17" parent="11" name="Name">
+      <DataType>String|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="18" parent="11" name="image_url">
+      <DataType>String|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="19" parent="11" name="keywords">
+      <DataType>String|12s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="20" parent="11" name="price">
+      <DataType>String|12s</DataType>
+      <Position>9</Position>
+    </column>
+  </database-model>
+</dataSource>

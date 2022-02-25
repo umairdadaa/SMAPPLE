@@ -1,115 +1,145 @@
 [{
-        "Name": "Iphone 11 ",
-        "Brand": "Apple",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
-        "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
-        "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
-        "image_url": "assets/img/iphone11.png",
-        "price": "AED 2,249"
-
-    }, {
-        "Name": "Iphone 11 pro",
-        "Brand": "Apple",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
-        "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
-        "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
-        "image_url": "assets/img/iphone11Pro.png",
-        "price": "AED 2,899"
-
-    }, {
-        "Name": "Iphone 12 mini",
-        "Brand": "Apple",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
-        "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
-        "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
-        "image_url": "assets/img/iphone12mini.png",
-        "price": "AED 2,449"
-
-    }, {
-
-        "Name": "Iphone 12 Pro",
-        "Brand": "Apple",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
-        "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
-        "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
-        "image_url": "assets/img/12pro.png",
-        "price": "AED 3,783"
+    "_id": {
+        "$oid": "621630a5469800a885f5559b"
     },
-    {
-        "Name": "Iphone 13",
-        "Brand": "Apple",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
-        "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
-        "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
-        "image_url": "assets/img/iphon13mini.png",
-        "price": "AED "
-
-    }, {
-
-        "Name": "Iphone 13 Pro MAX",
-        "Brand": "Apple",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
-        "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
-        "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
-        "image_url": "assets/img/iphone13max.png",
-        "price": "AED 4,200"
-
-    }, {
-        "Name": "Galaxy Note20 5G",
-        "Brand": "Samsung",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
-        "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
-        "Capacity": "[\"256GB\",\"512GB\"]",
-        "image_url": "assets/img/Note20.png",
-        "price": "AED 3,949"
-
-    }, {
-        "Name": "Galaxy A52s 5G",
-        "Brand": "Samsung",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
-        "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
-        "Capacity": "[\"256GB\",\"512GB\"]",
-        "image_url": "assets/img/A52s.png",
-        "price": "AED 3,549"
-
+    "Name": "Iphone 11 ",
+    "Brand": "Apple",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+    "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+    "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+    "image_url": "assets/img/iphone11.png",
+    "price": "AED 2,249",
+    "keywords": "Iphone 11; iphone 11; 11; apple; Apple; Iphone; iphone; "
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f5559c"
     },
-    {
-        "Name": "Galaxy Note10+ 5G",
-        "Brand": "Samsung",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
-        "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
-        "Capacity": "[\"256GB\",\"512GB\"]",
-        "image_url": "assets/img/Note10+.png",
-        "price": "AED 3,249"
-
-    }, {
-
-        "Name": "Galaxy Z Filp3 5G",
-        "Brand": "Samsung",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
-        "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
-        "Capacity": "[\"128GB\",\"256GB\"]",
-        "image_url": "assets/img/Zfip3.png",
-        "price": "AED 3,999"
+    "Name": "Iphone 11 pro",
+    "Brand": "Apple",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+    "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+    "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+    "image_url": "assets/img/iphone11Pro.png",
+    "price": "AED 2,899",
+    "keywords": "Iphone 11; iphone 11; 11; pro; Pro; apple; Apple; Iphone; iphone; "
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f5559d"
     },
-
-    {
-
-        "Name": "Galaxy S21 Plus",
-        "Brand": "Samsung",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
-        "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
-        "Capacity": "[\"128GB\",\"256GB\"]",
-        "image_url": "assets/img/Samsung-Galaxy-S21.png",
-        "price": "AED 2,999"
-    }, {
-
-        "Name": "Galaxy S22 Ultra",
-        "Brand": "Samsung",
-        "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
-        "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
-        "Capacity": "[\"128GB\",\"256GB\"]",
-        "image_url": "assets/img/SamsungUltra.png",
-        "price": "AED 2,500"
-    }
-]
+    "Name": "Iphone 12 mini",
+    "Brand": "Apple",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+    "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+    "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+    "image_url": "assets/img/iphone12mini.png",
+    "price": "AED 2,449",
+    "keywords": "Iphone 12; iphone 12; 12; mini; Mini; apple; Apple; Iphone; iphone"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f5559e"
+    },
+    "Name": "Iphone 12 Pro",
+    "Brand": "Apple",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+    "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+    "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+    "image_url": "assets/img/12pro.png",
+    "price": "AED 3,783",
+    "keywords": "Iphone 12; iphone 12; 12; pro; Pro; apple; Apple; Iphone; iphone; 5G; 5g"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f5559f"
+    },
+    "Name": "Iphone 13",
+    "Brand": "Apple",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+    "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+    "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+    "image_url": "assets/img/iphon13mini.png",
+    "price": "AED 3799",
+    "keywords": "Iphone 13; iphone 13; 13; apple; Apple; Iphone; iphone; 5G; 5g"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f555a0"
+    },
+    "Name": "Iphone 13 Pro MAX",
+    "Brand": "Apple",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an iPhone 8 or newer****",
+    "Color": "[\"Sierra Blue\",\"Silver\",\"Gold\",\"Graphite\",\"\"]",
+    "Capacity": "[\"128GB\",\"256GB\",\"512GB\",\"1TB\",\"\"]",
+    "image_url": "assets/img/iphone13max.png",
+    "price": "AED 4,200",
+    "keywords": "Iphone 13; iphone 13; 13; pro; Pro; Max; max; apple; Apple; Iphone; iphone; 5G; 5g"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f555a1"
+    },
+    "Name": "Galaxy Note20 5G",
+    "Brand": "Samsung",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+    "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+    "Capacity": "[\"256GB\",\"512GB\"]",
+    "image_url": "assets/img/Note20.png",
+    "price": "AED 3,949",
+    "keywords": "20; Note 20; note 20; Note; note; samsung; Samsung; Galaxy; galaxy; 5G; 5g"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f555a2"
+    },
+    "Name": "Galaxy A52s 5G",
+    "Brand": "Samsung",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+    "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+    "Capacity": "[\"256GB\",\"512GB\"]",
+    "image_url": "assets/img/A52s.png",
+    "price": "AED 3,549",
+    "keywords": "A52s; A52; a52s; a52; samsung; Samsung; Galaxy; galaxy; 5G; 5g"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f555a3"
+    },
+    "Name": "Galaxy Note10+ 5G",
+    "Brand": "Samsung",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+    "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+    "Capacity": "[\"256GB\",\"512GB\"]",
+    "image_url": "assets/img/Note10+.png",
+    "price": "AED 3,249",
+    "keywords": "10; Note 10; note 10; Note; note; plus; Plus; +; samsung; Samsung; Galaxy; galaxy; 5G; 5g"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f555a4"
+    },
+    "Name": "Galaxy Z Filp3 5G",
+    "Brand": "Samsung",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+    "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+    "Capacity": "[\"128GB\",\"256GB\"]",
+    "image_url": "assets/img/Zfip3.png",
+    "price": "AED 3,999",
+    "keywords": "Z; z; Flip; flip; 3; samsung; Samsung; Galaxy; galaxy; 5G; 5g"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f555a5"
+    },
+    "Name": "Galaxy S21 Plus",
+    "Brand": "Samsung",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+    "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+    "Capacity": "[\"128GB\",\"256GB\"]",
+    "image_url": "assets/img/Samsung-Galaxy-S21.png",
+    "price": "AED 2,999",
+    "keywords": "21; S21; s21; plus; Plus; +; samsung; Samsung; Galaxy; galaxy; 5G; 5g"
+}, {
+    "_id": {
+        "$oid": "621630a5469800a885f555a6"
+    },
+    "Name": "Galaxy S22 Ultra",
+    "Brand": "Samsung",
+    "Description": "Get AED 300 - AED 2,285 off when you  trade in an S9+ or newer****",
+    "Color": "[\"violet\", \"pink\",\"gray\",\"white\"]",
+    "Capacity": "[\"128GB\",\"256GB\"]",
+    "image_url": "assets/img/SamsungUltra.png",
+    "price": "AED 2,500",
+    "keywords": "S22; s22; Ultra; ultra; samsung; Samsung; Galaxy; galaxy; 5G; 5g"
+}]

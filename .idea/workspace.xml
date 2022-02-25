@@ -4,8 +4,11 @@
     <list default="true" id="68c07e16-5d14-431d-9611-6afef0398233" name="Changes" comment="Dropdown menu - Products">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a2e40d63-3691-454c-b38e-50b2a757177e.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/apple_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/apple_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/assets/MongoDB/Products.json" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/assets/MongoDB/Products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/samsung_products.php" afterDir="false" />
     </list>
@@ -36,7 +39,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_samsung_products.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/CST2120 Coursework 2/SMAPPLE/find_products.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,6 +90,7 @@
       <workItem from="1645629806342" duration="6939000" />
       <workItem from="1645654575309" duration="2116000" />
       <workItem from="1645690976140" duration="13019000" />
+      <workItem from="1645718267814" duration="5484000" />
     </task>
     <task id="LOCAL-00001" summary="Removed Name Input from">
       <created>1645214518147</created>
