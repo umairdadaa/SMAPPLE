@@ -4,14 +4,12 @@ include('common.php');
 session_start();
 
 if(isset($_SESSION['loggedInUsername']) && $_SESSION['loggedInUsername'] == "admin"){
-    echo '<li class="nav-item">';
-    echo '<a class="nav-link" href="staff_logout.php">Logout</a>';
-    echo '</li>';
+    output_admin_navigation("Add Products");
+
   } else {
     header('location: login_staff.php');
   }
 
-output_admin_navigation("Edit Products")
 ?>
 
 
@@ -26,7 +24,11 @@ output_admin_navigation("Edit Products")
     <input type="text"  name="name" required/>
 
     <label for="brand">Brand:</label>
-    <input type="text"  name="brand" required/>
+    <select name="brand" id="" required>
+        <option value="">--Please choose an option--</option>
+        <option value="Samsung">Samsung</option>
+        <option value="iPhone">iPhone</option>
+    </select>
 
     <label for="description">Description: </label>
     <input type="text"  name="description" required/>
@@ -58,10 +60,13 @@ output_admin_navigation("Edit Products")
     <label for="img">Product Image:</label>
     <input type="file" name="imageToUpload" id="" placeholder="assets/img/" required>
 
-    <label for="price"> Price:</label>
+    <label for="price">Price:</label>
     <input type="number"  name="price" required/>
 
-    <div style="padding: 30px;"></div>
+    <label for="keywords">Keywords:</label>
+    <input type="text"  name="keywords" required/>
+
+    <div style="padding: 10px;"></div>
 
     <input id=add type="submit" class="button" value="Add Product" />
     </form>
