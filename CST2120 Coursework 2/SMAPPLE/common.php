@@ -219,7 +219,7 @@ function output_admin_navigation($title){
     echo '<a class="nav-link" href="add_products_admin.php">Add Products</a>';
     echo '</li>';
     echo '<li class="nav-item">';
-    echo '<a class="nav-link" href="view_order_admin.php">View Orders</a>';
+    echo '<a class="nav-link" href="update_product.php">Update Products</a>';
     echo '</li>';
     echo '<li class="nav-item">';
     echo '<a class="nav-link" href="staff_logout.php">Logout</a>';
