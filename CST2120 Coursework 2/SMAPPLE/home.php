@@ -79,6 +79,10 @@ output_header_navigation("Home", "min_custom_index")
 
 </section>
 
+
+<script src="assets\js\recommender.js"></script>
+
+
 <?php
 
 output_footer()

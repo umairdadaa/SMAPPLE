@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2018-present MongoDB, Inc.
+ * Copyright 2018 MongoDB, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,13 +18,11 @@
 namespace MongoDB\Operation;
 
 use MongoDB\Driver\Command;
-use MongoDB\Driver\Exception\RuntimeException as DriverRuntimeException;
 use MongoDB\Driver\ReadPreference;
 use MongoDB\Driver\Server;
 use MongoDB\Driver\Session;
 use MongoDB\Exception\InvalidArgumentException;
 use MongoDB\Exception\UnsupportedException;
-
 use function current;
 use function is_array;
 use function is_string;
@@ -39,12 +37,9 @@ use function MongoDB\server_supports_feature;
  */
 class Explain implements Executable
 {
-    public const VERBOSITY_ALL_PLANS = 'allPlansExecution';
-    public const VERBOSITY_EXEC_STATS = 'executionStats';
-    public const VERBOSITY_QUERY = 'queryPlanner';
-
-    /** @var integer */
-    private static $wireVersionForAggregate = 7;
+    const VERBOSITY_ALL_PLANS = 'allPlansExecution';
+    const VERBOSITY_EXEC_STATS = 'executionStats';
+    const VERBOSITY_QUERY = 'queryPlanner';
 
     /** @var integer */
     private static $wireVersionForDistinct = 4;
@@ -103,15 +98,6 @@ class Explain implements Executable
         $this->options = $options;
     }
 
-    /**
-     * Execute the operation.
-     *
-     * @see Executable::execute()
-     * @param Server $server
-     * @return array|object
-     * @throws UnsupportedException if the server does not support explaining the operation
-     * @throws DriverRuntimeException for other driver errors (e.g. connection errors)
-     */
     public function execute(Server $server)
     {
         if ($this->explainable instanceof Distinct && ! server_supports_feature($server, self::$wireVersionForDistinct)) {
@@ -119,10 +105,6 @@ class Explain implements Executable
         }
 
         if ($this->isFindAndModify($this->explainable) && ! server_supports_feature($server, self::$wireVersionForFindAndModify)) {
-            throw UnsupportedException::explainNotSupported();
-        }
-
-        if ($this->explainable instanceof Aggregate && ! server_supports_feature($server, self::$wireVersionForAggregate)) {
             throw UnsupportedException::explainNotSupported();
         }
 
@@ -162,7 +144,7 @@ class Explain implements Executable
         return $options;
     }
 
-    private function isFindAndModify(Explainable $explainable): bool
+    private function isFindAndModify($explainable)
     {
         if ($explainable instanceof FindAndModify || $explainable instanceof FindOneAndDelete || $explainable instanceof FindOneAndReplace || $explainable instanceof FindOneAndUpdate) {
             return true;

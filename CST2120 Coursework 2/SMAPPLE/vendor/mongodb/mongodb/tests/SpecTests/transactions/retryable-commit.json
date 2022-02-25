@@ -57,7 +57,6 @@
           "object": "session0",
           "result": {
             "errorLabelsContain": [
-              "RetryableWriteError",
               "UnknownTransactionCommitResult"
             ],
             "errorLabelsOmit": [
@@ -208,7 +207,6 @@
           "object": "session0",
           "result": {
             "errorLabelsContain": [
-              "RetryableWriteError",
               "UnknownTransactionCommitResult"
             ],
             "errorLabelsOmit": [
@@ -355,9 +353,7 @@
           "result": {
             "errorCodeName": "Interrupted",
             "errorLabelsOmit": [
-              "RetryableWriteError",
-              "TransientTransactionError",
-              "UnknownTransactionCommitResult"
+              "TransientTransactionError"
             ]
           }
         }
@@ -410,7 +406,7 @@
       }
     },
     {
-      "description": "commitTransaction is not retried after UnsatisfiableWriteConcern error",
+      "description": "commitTransaction fails after WriteConcernError Interrupted",
       "failPoint": {
         "configureFailPoint": "failCommand",
         "mode": {
@@ -421,8 +417,8 @@
             "commitTransaction"
           ],
           "writeConcernError": {
-            "code": 100,
-            "errmsg": "Not enough data-bearing nodes"
+            "code": 11601,
+            "errmsg": "operation was interrupted"
           }
         }
       },
@@ -456,9 +452,7 @@
           "object": "session0",
           "result": {
             "errorLabelsOmit": [
-              "RetryableWriteError",
-              "TransientTransactionError",
-              "UnknownTransactionCommitResult"
+              "TransientTransactionError"
             ]
           }
         }
@@ -624,7 +618,7 @@
       }
     },
     {
-      "description": "commitTransaction succeeds after NotWritablePrimary",
+      "description": "commitTransaction succeeds after NotMaster",
       "failPoint": {
         "configureFailPoint": "failCommand",
         "mode": {
@@ -635,9 +629,6 @@
             "commitTransaction"
           ],
           "errorCode": 10107,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -735,7 +726,7 @@
       }
     },
     {
-      "description": "commitTransaction succeeds after NotPrimaryOrSecondary",
+      "description": "commitTransaction succeeds after NotMasterOrSecondary",
       "failPoint": {
         "configureFailPoint": "failCommand",
         "mode": {
@@ -746,9 +737,6 @@
             "commitTransaction"
           ],
           "errorCode": 13436,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -846,7 +834,7 @@
       }
     },
     {
-      "description": "commitTransaction succeeds after NotPrimaryNoSecondaryOk",
+      "description": "commitTransaction succeeds after NotMasterNoSlaveOk",
       "failPoint": {
         "configureFailPoint": "failCommand",
         "mode": {
@@ -857,9 +845,6 @@
             "commitTransaction"
           ],
           "errorCode": 13435,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -968,9 +953,6 @@
             "commitTransaction"
           ],
           "errorCode": 11602,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1079,9 +1061,6 @@
             "commitTransaction"
           ],
           "errorCode": 11600,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1190,9 +1169,6 @@
             "commitTransaction"
           ],
           "errorCode": 189,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1301,9 +1277,6 @@
             "commitTransaction"
           ],
           "errorCode": 91,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1412,9 +1385,6 @@
             "commitTransaction"
           ],
           "errorCode": 7,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1523,9 +1493,6 @@
             "commitTransaction"
           ],
           "errorCode": 6,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1634,9 +1601,6 @@
             "commitTransaction"
           ],
           "errorCode": 9001,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1745,9 +1709,6 @@
             "commitTransaction"
           ],
           "errorCode": 89,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1854,9 +1815,6 @@
         "data": {
           "failCommands": [
             "commitTransaction"
-          ],
-          "errorLabels": [
-            "RetryableWriteError"
           ],
           "writeConcernError": {
             "code": 11600,
@@ -1977,9 +1935,6 @@
           "failCommands": [
             "commitTransaction"
           ],
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "writeConcernError": {
             "code": 11602,
             "errmsg": "Replication is being shut down"
@@ -2099,9 +2054,6 @@
           "failCommands": [
             "commitTransaction"
           ],
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "writeConcernError": {
             "code": 189,
             "errmsg": "Replication is being shut down"
@@ -2220,9 +2172,6 @@
         "data": {
           "failCommands": [
             "commitTransaction"
-          ],
-          "errorLabels": [
-            "RetryableWriteError"
           ],
           "writeConcernError": {
             "code": 91,

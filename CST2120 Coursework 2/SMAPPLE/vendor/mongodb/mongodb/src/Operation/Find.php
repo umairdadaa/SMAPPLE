@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2015-present MongoDB, Inc.
+ * Copyright 2015-2017 MongoDB, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,6 @@ use MongoDB\Driver\Server;
 use MongoDB\Driver\Session;
 use MongoDB\Exception\InvalidArgumentException;
 use MongoDB\Exception\UnsupportedException;
-
 use function is_array;
 use function is_bool;
 use function is_integer;
@@ -34,7 +33,6 @@ use function is_object;
 use function is_string;
 use function MongoDB\server_supports_feature;
 use function trigger_error;
-
 use const E_USER_DEPRECATED;
 
 /**
@@ -47,18 +45,15 @@ use const E_USER_DEPRECATED;
  */
 class Find implements Executable, Explainable
 {
-    public const NON_TAILABLE = 1;
-    public const TAILABLE = 2;
-    public const TAILABLE_AWAIT = 3;
+    const NON_TAILABLE = 1;
+    const TAILABLE = 2;
+    const TAILABLE_AWAIT = 3;
 
     /** @var integer */
     private static $wireVersionForCollation = 5;
 
     /** @var integer */
     private static $wireVersionForReadConcern = 4;
-
-    /** @var integer */
-    private static $wireVersionForAllowDiskUseServerSideError = 4;
 
     /** @var string */
     private $databaseName;
@@ -76,10 +71,6 @@ class Find implements Executable, Explainable
      * Constructs a find command.
      *
      * Supported options:
-     *
-     *  * allowDiskUse (boolean): Enables writing to temporary files. When set
-     *    to true, queries can write data to the _tmp sub-directory in the
-     *    dbPath directory.
      *
      *  * allowPartialResults (boolean): Get partial results from a mongos if
      *    some shards are inaccessible (instead of throwing an error).
@@ -129,7 +120,7 @@ class Find implements Executable, Explainable
      *    Set this option to prevent that.
      *
      *  * oplogReplay (boolean): Internal replication use only. The driver
-     *    should not set this. This option is deprecated as of MongoDB 4.4.
+     *    should not set this.
      *
      *  * projection (document): Limits the fields to return for the matching
      *    document.
@@ -178,10 +169,6 @@ class Find implements Executable, Explainable
             throw InvalidArgumentException::invalidType('$filter', $filter, 'array or object');
         }
 
-        if (isset($options['allowDiskUse']) && ! is_bool($options['allowDiskUse'])) {
-            throw InvalidArgumentException::invalidType('"allowDiskUse" option', $options['allowDiskUse'], 'boolean');
-        }
-
         if (isset($options['allowPartialResults']) && ! is_bool($options['allowPartialResults'])) {
             throw InvalidArgumentException::invalidType('"allowPartialResults" option', $options['allowPartialResults'], 'boolean');
         }
@@ -203,11 +190,9 @@ class Find implements Executable, Explainable
                 throw InvalidArgumentException::invalidType('"cursorType" option', $options['cursorType'], 'integer');
             }
 
-            if (
-                $options['cursorType'] !== self::NON_TAILABLE &&
+            if ($options['cursorType'] !== self::NON_TAILABLE &&
                 $options['cursorType'] !== self::TAILABLE &&
-                $options['cursorType'] !== self::TAILABLE_AWAIT
-            ) {
+                $options['cursorType'] !== self::TAILABLE_AWAIT) {
                 throw new InvalidArgumentException('Invalid value for "cursorType" option: ' . $options['cursorType']);
             }
         }
@@ -329,10 +314,6 @@ class Find implements Executable, Explainable
             throw UnsupportedException::readConcernNotSupported();
         }
 
-        if (isset($this->options['allowDiskUse']) && ! server_supports_feature($server, self::$wireVersionForAllowDiskUseServerSideError)) {
-            throw UnsupportedException::allowDiskUseNotSupported();
-        }
-
         $inTransaction = isset($this->options['session']) && $this->options['session']->isInTransaction();
         if ($inTransaction && isset($this->options['readConcern'])) {
             throw UnsupportedException::readConcernNotSupportedInTransaction();
@@ -347,13 +328,6 @@ class Find implements Executable, Explainable
         return $cursor;
     }
 
-    /**
-     * Returns the command document for this operation.
-     *
-     * @see Explainable::getCommandDocument()
-     * @param Server $server
-     * @return array
-     */
     public function getCommandDocument(Server $server)
     {
         return $this->createCommandDocument();
@@ -362,7 +336,7 @@ class Find implements Executable, Explainable
     /**
      * Construct a command document for Find
      */
-    private function createCommandDocument(): array
+    private function createCommandDocument()
     {
         $cmd = ['find' => $this->collectionName, 'filter' => (object) $this->filter];
 
@@ -394,7 +368,6 @@ class Find implements Executable, Explainable
                 $options[$modifier[0]] = $options['modifiers'][$modifier[1]];
             }
         }
-
         unset($options['modifiers']);
 
         return $cmd + $options;
@@ -437,14 +410,13 @@ class Find implements Executable, Explainable
             if ($this->options['cursorType'] === self::TAILABLE) {
                 $options['tailable'] = true;
             }
-
             if ($this->options['cursorType'] === self::TAILABLE_AWAIT) {
                 $options['tailable'] = true;
                 $options['awaitData'] = true;
             }
         }
 
-        foreach (['allowDiskUse', 'allowPartialResults', 'batchSize', 'comment', 'hint', 'limit', 'maxAwaitTimeMS', 'maxScan', 'maxTimeMS', 'noCursorTimeout', 'oplogReplay', 'projection', 'readConcern', 'returnKey', 'showRecordId', 'skip', 'snapshot', 'sort'] as $option) {
+        foreach (['allowPartialResults', 'batchSize', 'comment', 'hint', 'limit', 'maxAwaitTimeMS', 'maxScan', 'maxTimeMS', 'noCursorTimeout', 'oplogReplay', 'projection', 'readConcern', 'returnKey', 'showRecordId', 'skip', 'snapshot', 'sort'] as $option) {
             if (isset($this->options[$option])) {
                 $options[$option] = $this->options[$option];
             }

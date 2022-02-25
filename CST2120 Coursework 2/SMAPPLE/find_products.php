@@ -67,12 +67,20 @@ foreach($cursor as $reccord){
     echo "Price: ".$reccord['price'];
     echo "<p>";
     echo "<button class='submit' type='submit' name='Submit'>Add To Cart</button>";
+ 
     echo "<p>";
     echo "_______________________________________";
 
-
-
 }
+
+
+
+
+
 
 output_footer()
 ?>
+
+</body>
+
+</html>

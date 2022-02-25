@@ -402,7 +402,7 @@
       }
     },
     {
-      "description": "abortTransaction succeeds after NotWritablePrimary",
+      "description": "abortTransaction succeeds after NotMaster",
       "failPoint": {
         "configureFailPoint": "failCommand",
         "mode": {
@@ -413,9 +413,6 @@
             "abortTransaction"
           ],
           "errorCode": 10107,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -506,7 +503,7 @@
       }
     },
     {
-      "description": "abortTransaction succeeds after NotPrimaryOrSecondary",
+      "description": "abortTransaction succeeds after NotMasterOrSecondary",
       "failPoint": {
         "configureFailPoint": "failCommand",
         "mode": {
@@ -517,9 +514,6 @@
             "abortTransaction"
           ],
           "errorCode": 13436,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -610,7 +604,7 @@
       }
     },
     {
-      "description": "abortTransaction succeeds after NotPrimaryNoSecondaryOk",
+      "description": "abortTransaction succeeds after NotMasterNoSlaveOk",
       "failPoint": {
         "configureFailPoint": "failCommand",
         "mode": {
@@ -621,9 +615,6 @@
             "abortTransaction"
           ],
           "errorCode": 13435,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -725,9 +716,6 @@
             "abortTransaction"
           ],
           "errorCode": 11602,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -829,9 +817,6 @@
             "abortTransaction"
           ],
           "errorCode": 11600,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -933,9 +918,6 @@
             "abortTransaction"
           ],
           "errorCode": 189,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1037,9 +1019,6 @@
             "abortTransaction"
           ],
           "errorCode": 91,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1141,9 +1120,6 @@
             "abortTransaction"
           ],
           "errorCode": 7,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1245,9 +1221,6 @@
             "abortTransaction"
           ],
           "errorCode": 6,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1349,9 +1322,6 @@
             "abortTransaction"
           ],
           "errorCode": 9001,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1453,9 +1423,6 @@
             "abortTransaction"
           ],
           "errorCode": 89,
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "closeConnection": false
         }
       },
@@ -1555,9 +1522,6 @@
         "data": {
           "failCommands": [
             "abortTransaction"
-          ],
-          "errorLabels": [
-            "RetryableWriteError"
           ],
           "writeConcernError": {
             "code": 11600,
@@ -1673,9 +1637,6 @@
           "failCommands": [
             "abortTransaction"
           ],
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "writeConcernError": {
             "code": 11602,
             "errmsg": "Replication is being shut down"
@@ -1790,9 +1751,6 @@
           "failCommands": [
             "abortTransaction"
           ],
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "writeConcernError": {
             "code": 189,
             "errmsg": "Replication is being shut down"
@@ -1906,9 +1864,6 @@
         "data": {
           "failCommands": [
             "abortTransaction"
-          ],
-          "errorLabels": [
-            "RetryableWriteError"
           ],
           "writeConcernError": {
             "code": 91,

@@ -2,12 +2,11 @@
 
 namespace MongoDB\Tests;
 
+use Exception;
 use MongoDB\Driver\Monitoring\CommandFailedEvent;
 use MongoDB\Driver\Monitoring\CommandStartedEvent;
 use MongoDB\Driver\Monitoring\CommandSubscriber;
 use MongoDB\Driver\Monitoring\CommandSucceededEvent;
-use Throwable;
-
 use function call_user_func;
 use function MongoDB\Driver\Monitoring\addSubscriber;
 use function MongoDB\Driver\Monitoring\removeSubscriber;
@@ -20,7 +19,7 @@ class CommandObserver implements CommandSubscriber
     /** @var array */
     private $commands = [];
 
-    public function observe(callable $execution, callable $commandCallback): void
+    public function observe(callable $execution, callable $commandCallback)
     {
         $this->commands = [];
 
@@ -28,7 +27,7 @@ class CommandObserver implements CommandSubscriber
 
         try {
             call_user_func($execution);
-        } catch (Throwable $executionException) {
+        } catch (Exception $executionException) {
         }
 
         removeSubscriber($this);
@@ -42,17 +41,17 @@ class CommandObserver implements CommandSubscriber
         }
     }
 
-    public function commandStarted(CommandStartedEvent $event): void
+    public function commandStarted(CommandStartedEvent $event)
     {
         $this->commands[$event->getRequestId()]['started'] = $event;
     }
 
-    public function commandSucceeded(CommandSucceededEvent $event): void
+    public function commandSucceeded(CommandSucceededEvent $event)
     {
         $this->commands[$event->getRequestId()]['succeeded'] = $event;
     }
 
-    public function commandFailed(CommandFailedEvent $event): void
+    public function commandFailed(CommandFailedEvent $event)
     {
         $this->commands[$event->getRequestId()]['failed'] = $event;
     }

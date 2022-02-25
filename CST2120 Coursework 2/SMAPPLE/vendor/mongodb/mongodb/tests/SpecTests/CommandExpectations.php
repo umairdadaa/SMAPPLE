@@ -9,7 +9,6 @@ use MongoDB\Driver\Monitoring\CommandStartedEvent;
 use MongoDB\Driver\Monitoring\CommandSubscriber;
 use MongoDB\Driver\Monitoring\CommandSucceededEvent;
 use MultipleIterator;
-
 use function count;
 use function in_array;
 use function key;
@@ -39,28 +38,22 @@ class CommandExpectations implements CommandSubscriber
     /** @var boolean */
     private $ignoreExtraEvents = false;
 
-    /** @var boolean */
-    private $ignoreKeyVaultListCollections = false;
-
     /** @var string[] */
     private $ignoredCommandNames = [];
 
     private function __construct(array $events)
     {
         foreach ($events as $event) {
-            switch (key((array) $event)) {
+            switch (key($event)) {
                 case 'command_failed_event':
-                    // phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
                     $this->expectedEvents[] = [$event->command_failed_event, CommandFailedEvent::class];
                     break;
 
                 case 'command_started_event':
-                    // phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
                     $this->expectedEvents[] = [$event->command_started_event, CommandStartedEvent::class];
                     break;
 
                 case 'command_succeeded_event':
-                    // phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
                     $this->expectedEvents[] = [$event->command_succeeded_event, CommandSucceededEvent::class];
                     break;
 
@@ -84,33 +77,12 @@ class CommandExpectations implements CommandSubscriber
         return $o;
     }
 
-    public static function fromClientSideEncryption(array $expectedEvents)
-    {
-        $o = new self($expectedEvents);
-
-        $o->ignoreCommandFailed = true;
-        $o->ignoreCommandSucceeded = true;
-        $o->ignoreKeyVaultListCollections = true;
-
-        return $o;
-    }
-
     public static function fromCommandMonitoring(array $expectedEvents)
     {
         return new self($expectedEvents);
     }
 
     public static function fromCrud(array $expectedEvents)
-    {
-        $o = new self($expectedEvents);
-
-        $o->ignoreCommandFailed = true;
-        $o->ignoreCommandSucceeded = true;
-
-        return $o;
-    }
-
-    public static function fromReadWriteConcern(array $expectedEvents)
     {
         $o = new self($expectedEvents);
 
@@ -148,7 +120,7 @@ class CommandExpectations implements CommandSubscriber
          * configureFailPoint needs to be ignored as the targetedFailPoint
          * operation will be caught by command monitoring and is also not
          * present in the expected commands in spec tests. */
-        $o->ignoredCommandNames = ['buildInfo', 'getParameter', 'configureFailPoint', 'listCollections', 'listIndexes'];
+        $o->ignoredCommandNames = ['buildInfo', 'getParameter', 'configureFailPoint'];
 
         return $o;
     }
@@ -158,7 +130,7 @@ class CommandExpectations implements CommandSubscriber
      *
      * @see https://www.php.net/manual/en/mongodb-driver-monitoring-commandsubscriber.commandfailed.php
      */
-    public function commandFailed(CommandFailedEvent $event): void
+    public function commandFailed(CommandFailedEvent $event)
     {
         if ($this->ignoreCommandFailed || $this->isEventIgnored($event)) {
             return;
@@ -172,7 +144,7 @@ class CommandExpectations implements CommandSubscriber
      *
      * @see https://www.php.net/manual/en/mongodb-driver-monitoring-commandsubscriber.commandstarted.php
      */
-    public function commandStarted(CommandStartedEvent $event): void
+    public function commandStarted(CommandStartedEvent $event)
     {
         if ($this->ignoreCommandStarted || $this->isEventIgnored($event)) {
             return;
@@ -186,7 +158,7 @@ class CommandExpectations implements CommandSubscriber
      *
      * @see https://www.php.net/manual/en/mongodb-driver-monitoring-commandsubscriber.commandsucceeded.php
      */
-    public function commandSucceeded(CommandSucceededEvent $event): void
+    public function commandSucceeded(CommandSucceededEvent $event)
     {
         if ($this->ignoreCommandSucceeded || $this->isEventIgnored($event)) {
             return;
@@ -198,7 +170,7 @@ class CommandExpectations implements CommandSubscriber
     /**
      * Start command monitoring.
      */
-    public function startMonitoring(): void
+    public function startMonitoring()
     {
         addSubscriber($this);
     }
@@ -206,7 +178,7 @@ class CommandExpectations implements CommandSubscriber
     /**
      * Stop command monitoring.
      */
-    public function stopMonitoring(): void
+    public function stopMonitoring()
     {
         removeSubscriber($this);
     }
@@ -217,7 +189,7 @@ class CommandExpectations implements CommandSubscriber
      * @param FunctionalTestCase $test    Test instance
      * @param Context            $context Execution context
      */
-    public function assert(FunctionalTestCase $test, Context $context): void
+    public function assert(FunctionalTestCase $test, Context $context)
     {
         $test->assertCount(count($this->expectedEvents), $this->actualEvents);
 
@@ -226,12 +198,11 @@ class CommandExpectations implements CommandSubscriber
         $mi->attachIterator(new ArrayIterator($this->actualEvents));
 
         foreach ($mi as $events) {
-            [$expectedEventAndClass, $actualEvent] = $events;
-            [$expectedEvent, $expectedClass] = $expectedEventAndClass;
+            list($expectedEventAndClass, $actualEvent) = $events;
+            list($expectedEvent, $expectedClass) = $expectedEventAndClass;
 
             $test->assertInstanceOf($expectedClass, $actualEvent);
 
-            // phpcs:disable Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
             if (isset($expectedEvent->command_name)) {
                 $test->assertSame($expectedEvent->command_name, $actualEvent->getCommandName());
             }
@@ -239,8 +210,6 @@ class CommandExpectations implements CommandSubscriber
             if (isset($expectedEvent->database_name)) {
                 $test->assertSame($expectedEvent->database_name, $actualEvent->getDatabaseName());
             }
-
-            // phpcs:enable Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
 
             if (isset($expectedEvent->command)) {
                 $test->assertInstanceOf(CommandStartedEvent::class, $actualEvent);
@@ -258,24 +227,7 @@ class CommandExpectations implements CommandSubscriber
 
     private function isEventIgnored($event)
     {
-        if ($this->ignoreExtraEvents && count($this->actualEvents) === count($this->expectedEvents)) {
-            return true;
-        }
-
-        if (in_array($event->getCommandName(), $this->ignoredCommandNames)) {
-            return true;
-        }
-
-        /* Note: libmongoc does not use a separate MongoClient to query for
-         * CSFLE metadata (DRIVERS-1459). Since the tests do not expect this
-         * command, we must ignore it. */
-        if (
-            $this->ignoreKeyVaultListCollections && $event instanceof CommandStartedEvent &&
-            $event->getCommandName() === 'listCollections' && $event->getDatabaseName() === 'keyvault'
-        ) {
-            return true;
-        }
-
-        return false;
+        return ($this->ignoreExtraEvents && count($this->actualEvents) === count($this->expectedEvents))
+            || in_array($event->getCommandName(), $this->ignoredCommandNames);
     }
 }

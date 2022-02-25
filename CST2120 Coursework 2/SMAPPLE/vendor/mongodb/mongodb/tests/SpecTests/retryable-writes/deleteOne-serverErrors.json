@@ -9,8 +9,7 @@
     {
       "minServerVersion": "4.1.7",
       "topology": [
-        "sharded",
-        "load-balanced"
+        "sharded"
       ]
     }
   ],
@@ -36,10 +35,7 @@
           "failCommands": [
             "delete"
           ],
-          "errorCode": 189,
-          "errorLabels": [
-            "RetryableWriteError"
-          ]
+          "errorCode": 189
         }
       },
       "operation": {
@@ -75,9 +71,6 @@
           "failCommands": [
             "delete"
           ],
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "writeConcernError": {
             "code": 91,
             "errmsg": "Replication is being shut down"
@@ -98,49 +91,6 @@
         },
         "collection": {
           "data": [
-            {
-              "_id": 2,
-              "x": 22
-            }
-          ]
-        }
-      }
-    },
-    {
-      "description": "DeleteOne fails with RetryableWriteError label after two connection failures",
-      "failPoint": {
-        "configureFailPoint": "failCommand",
-        "mode": {
-          "times": 2
-        },
-        "data": {
-          "failCommands": [
-            "delete"
-          ],
-          "closeConnection": true
-        }
-      },
-      "operation": {
-        "name": "deleteOne",
-        "arguments": {
-          "filter": {
-            "_id": 1
-          }
-        }
-      },
-      "outcome": {
-        "error": true,
-        "result": {
-          "errorLabelsContain": [
-            "RetryableWriteError"
-          ]
-        },
-        "collection": {
-          "data": [
-            {
-              "_id": 1,
-              "x": 11
-            },
             {
               "_id": 2,
               "x": 22

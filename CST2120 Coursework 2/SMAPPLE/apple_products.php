@@ -94,6 +94,8 @@ output_header_navigation("Apple Products", "min_custom_index")
 
     </section>
 
+   
+
     <script>
         //Download products when page loads
         window.onload = loadProducts;
@@ -135,9 +137,10 @@ output_header_navigation("Apple Products", "min_custom_index")
 
                 htmlStr += '<div class="col">';
                 htmlStr += '<div class="card">';
-                htmlStr += '<a href="view_product.html">';
+             
                 htmlStr += '<img src="' + prodArray[i].image_url +
                     '" class="card-img-top" alt="...">';
+          
                 htmlStr += '</a>';
                 htmlStr += '<div class="card-body">';
                 htmlStr += '<ul class="list-unstyled d-flex justify-content-between">';
@@ -148,7 +151,8 @@ output_header_navigation("Apple Products", "min_custom_index")
                 htmlStr += '<li class="text-right">' + prodArray[i].price + ' AED </li>';
                 htmlStr += '</ul>';
                 htmlStr += '</div>';
-                htmlStr += '<button class="btn btn-primary p-1 m-1" type="submit">Add to Cart</button>';
+
+                htmlStr += '<button class="btn btn-primary p-1 m-1" onclick=\'addToBasket("' + prodArray[i].image + '","' + prodArray[i].Name+ '", "' + prodArray[i].price + '")\'>Add to Cart</button>';
                 htmlStr += '</div>';
                 htmlStr += '</div>';
 
@@ -158,6 +162,44 @@ output_header_navigation("Apple Products", "min_custom_index")
             document.querySelector("#product-container").innerHTML = htmlStr;
         }
     </script>
+
+
+
+
+<script>
+
+function getBasket() {
+    let basket;
+    if (sessionStorage.basket === undefined || sessionStorage.basket === "") {
+        basket = [];
+    } else {
+        basket = JSON.parse(sessionStorage.basket);
+    }
+    return basket;
+}
+
+</script>
+
+
+<script>
+function addToBasket(prodID, prodName, prodprice, url) {
+
+let basket = getBasket(); //Load or create basket
+
+//Add product to basket
+basket.push({ id: prodID, name: prodName, price: prodprice, image: url });
+
+//Store in local storage
+sessionStorage.basket = JSON.stringify(basket);
+
+//Display basket in page.
+loadBasket();
+}
+
+</script>
+
+<script src="assets\js\recommender.js"></script>
+
 
 
 <?php

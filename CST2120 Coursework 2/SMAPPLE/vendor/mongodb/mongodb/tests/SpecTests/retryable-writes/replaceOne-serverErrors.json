@@ -9,8 +9,7 @@
     {
       "minServerVersion": "4.1.7",
       "topology": [
-        "sharded",
-        "load-balanced"
+        "sharded"
       ]
     }
   ],
@@ -36,10 +35,7 @@
           "failCommands": [
             "update"
           ],
-          "errorCode": 189,
-          "errorLabels": [
-            "RetryableWriteError"
-          ]
+          "errorCode": 189
         }
       },
       "operation": {
@@ -85,9 +81,6 @@
           "failCommands": [
             "update"
           ],
-          "errorLabels": [
-            "RetryableWriteError"
-          ],
           "writeConcernError": {
             "code": 91,
             "errmsg": "Replication is being shut down"
@@ -117,53 +110,6 @@
             {
               "_id": 1,
               "x": 111
-            },
-            {
-              "_id": 2,
-              "x": 22
-            }
-          ]
-        }
-      }
-    },
-    {
-      "description": "ReplaceOne fails with a RetryableWriteError label after two connection failures",
-      "failPoint": {
-        "configureFailPoint": "failCommand",
-        "mode": {
-          "times": 2
-        },
-        "data": {
-          "failCommands": [
-            "update"
-          ],
-          "closeConnection": true
-        }
-      },
-      "operation": {
-        "name": "replaceOne",
-        "arguments": {
-          "filter": {
-            "_id": 1
-          },
-          "replacement": {
-            "_id": 1,
-            "x": 111
-          }
-        }
-      },
-      "outcome": {
-        "error": true,
-        "result": {
-          "errorLabelsContain": [
-            "RetryableWriteError"
-          ]
-        },
-        "collection": {
-          "data": [
-            {
-              "_id": 1,
-              "x": 11
             },
             {
               "_id": 2,
