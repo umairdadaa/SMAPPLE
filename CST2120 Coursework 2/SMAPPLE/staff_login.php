@@ -36,7 +36,7 @@
     }
         
     //Start session for this user
-    $_SESSION['loggedInUserName'] = $username;
+    $_SESSION['loggedInUsername'] = $username;
     
     //Inform web page that login is successful
     echo 'ok';

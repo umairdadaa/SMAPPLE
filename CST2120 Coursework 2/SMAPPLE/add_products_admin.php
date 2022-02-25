@@ -1,5 +1,15 @@
 <?php
+
 include('common.php');
+session_start();
+
+if(isset($_SESSION['loggedInUsername']) && $_SESSION['loggedInUsername'] == "admin"){
+    echo '<li class="nav-item">';
+    echo '<a class="nav-link" href="staff_logout.php">Logout</a>';
+    echo '</li>';
+  } else {
+    header('location: login_staff.php');
+  }
 
 output_admin_navigation("Edit Products")
 ?>

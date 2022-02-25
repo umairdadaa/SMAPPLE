@@ -26,7 +26,7 @@ output_header_navigation("Login", "")
     New to SMAPPLE? <a href="register.php">Create your SMAPPLE account</a>
     <br>
     <br>
-    <button type="button" class="btn btn-outline-secondary"><a href="login_admin.php">I am a SMAPPLE employee</a></button>
+    <button type="button" class="btn btn-outline-secondary"><a href="login_staff.php">I am a SMAPPLE employee</a></button>
 </p>
 </div>
 
