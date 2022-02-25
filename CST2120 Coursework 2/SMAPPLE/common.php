@@ -221,6 +221,9 @@ function output_admin_navigation($title){
     echo '<li class="nav-item">';
     echo '<a class="nav-link" href="view_order_admin.php">View Orders</a>';
     echo '</li>';
+    echo '<li class="nav-item">';
+    echo '<a class="nav-link" href="staff_logout.php">Logout</a>';
+    echo '</li>';
     echo '</ul>';
     echo '</div>';
     echo '<div class="navbar align-self-center d-flex">';

@@ -1,9 +1,14 @@
 <?php
+
 include('common.php');
+session_start();
 
-output_admin_navigation("View Products")
+if(isset($_SESSION['loggedInUsername']) && $_SESSION['loggedInUsername'] == "admin"){
+    output_admin_navigation("View Products");
 
-
+  } else {
+    header('location: login_staff.php');
+  }
 
 ?>
 

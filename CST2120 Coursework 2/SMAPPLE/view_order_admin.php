@@ -1,7 +1,15 @@
 <?php
-include('common.php');
 
-output_admin_navigation("View Orders")
+include('common.php');
+session_start();
+
+if(isset($_SESSION['loggedInUsername']) && $_SESSION['loggedInUsername'] == "admin"){
+    output_admin_navigation("View Orders");
+
+  } else {
+    header('location: login_staff.php');
+  }
+
 ?>
 
 
